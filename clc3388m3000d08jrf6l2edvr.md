@@ -86,7 +86,7 @@ We can use the `Peek` method to return the top element from the stack without re
 Stack<int> stack = new Stack<int>();
 stack.Push(1);
 stack.Push(2);
-int x = stack.Peek(); // Return the top element (2) from the stack and store it in 
+int x = stack.Peek(); // Return the top element (2) from the stack and store it in
 ```
 
 ## **Queues**
@@ -365,6 +365,3 @@ Here is a table summarizing the main differences between the data structures cov
 * "Insert/Remove" refers to the ease of inserting and removing elements from the data structure.
     
 * "Search" refers to the speed at which elements can be searched in the data structure.
-    
-
-##
