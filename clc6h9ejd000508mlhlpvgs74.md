@@ -134,7 +134,7 @@ stringAction("hello");
 
 In this code, we are able to use the `Action<object>` delegate with the `Action<string>` delegate, even though `string` is a base of `object`. This is because the type parameter `T` in `Action<T>` is contravariant, which allows us to use it with a type that is a base of `string`.
 
-### **Example: Covariant and Contravariant LINQ Methods**
+### **Example2: Covariant and Contravariant LINQ Methods**
 
 The LINQ (Language Integrated Query) methods in C#, such as `Where`, `Select`, and `OrderBy`, use variance and contravariance to allow for greater flexibility in their use.
 
