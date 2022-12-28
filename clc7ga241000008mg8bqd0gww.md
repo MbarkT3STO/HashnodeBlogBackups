@@ -13,7 +13,7 @@ Modules in Angular can be divided into two types:
 2. Root module: This is the main module in an Angular application. It is the entry point for the application and it typically contains the root component and the bootstrap array. The root module is responsible for bootstrapping the application and it is typically the only module that is imported in the `main.ts` file.
     
 
-## **How to Create a Module in Angular**
+## **How to Create a Module in Angular?**
 
 To create a module in Angular, you first need to import the `NgModule` decorator from the `@angular/core` module. Then, you can define a class and decorate it with `@NgModule`.
 
@@ -42,7 +42,7 @@ The `@NgModule` decorator takes an object with the following properties:
 * `providers`: An array of services that should be available to the rest of the application.
     
 
-## **How to Use a Module in Angular**
+## **How to Use a Module in Angular?**
 
 To use a module in Angular, you need to import it in the module that depends on it. For example, if you have a module called `MyModule` and you want to use it in the root module of your application, you can do the following:
 
