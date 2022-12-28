@@ -98,7 +98,7 @@ This would render the `div` element only if the `showElement` variable is truthy
 
 Structural directives are a powerful tool for altering the DOM layout in an Angular application and can greatly simplify the development process by allowing you to encapsulate complex DOM manipulation logic into a single, easily-reusable directive.
 
-### Structural Directives
+### Attribute Directives
 
 Attribute directives are a type of directive in Angular that alter the appearance or behavior of an element, component, or another directive. They do not have a template and are identified by an attribute on an element.
 
