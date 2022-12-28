@@ -48,7 +48,7 @@ Then, in your Angular project, create a file called `tsconfig.json` with the fol
 
 This will configure your project to use TypeScript and compile your code to JavaScript that is compatible with most modern browsers.
 
-## **Use Components and Services**
+## **3\. Use Components and Services**
 
 In Angular, it's best to divide your code into small, reusable components and services. Components are responsible for displaying data and handling user interactions, while services are responsible for handling business logic and communicating with APIs and other backend systems.
 
@@ -60,7 +60,7 @@ To create a new component in your Angular project, you can use the Angular CLI t
 ng generate component my-component
 ```
 
-## **Use Modules**
+## **4\. Use Modules**
 
 In Angular, a module is a container for a group of related components, services, and other code. Modules help you organize your code into logical units and make it easier to manage dependencies and import and export code between different parts of your application.
 
@@ -81,7 +81,7 @@ This will create a new folder called `my-module` with the following files:
 
 You can then add your own components, services, and other code to the module as needed.
 
-## **Use the Angular Router**
+## **5\. Use the Angular Router**
 
 The Angular Router is a service that allows you to handle routing and navigation in your Angular application. It allows you to define different routes for different parts of your application and use the `routerLink` directive to navigate between them.
 
@@ -112,7 +112,7 @@ Then, you can use the `routerLink` directive in your templates to navigate betwe
 <a routerLink="/about">About</a>
 ```
 
-## **Use Dependency Injection**
+## **6\. Use Dependency Injection**
 
 Dependency injection is a design pattern that allows you to inject dependencies into your components and services at runtime. In Angular, dependency injection is implemented using a service provider and an injector.
 
@@ -131,7 +131,7 @@ export class MyService {
 }
 ```
 
-## **Use Reactive Forms**
+## **7\. Use Reactive Forms**
 
 Angular offers two types of forms: template-driven forms and reactive forms. Template-driven forms are easier to set up and use, but they can be less flexible and harder to test. Reactive forms, on the other hand, are more flexible and easier to test, but they require a bit more setup.
 
@@ -166,7 +166,7 @@ export class MyFormComponent {
 }
 ```
 
-## **Use Pipes**
+## **8\. Use Pipes**
 
 Pipes are a feature of Angular that allow you to transform data in your templates. They are a convenient way to apply formatting and transformations to data without having to write custom code in your component or service.
 
@@ -186,13 +186,13 @@ You can also pass arguments to pipes using the `:` operator. For example, you mi
 
 You can also create your own custom pipes to handle specific formatting or transformation needs in your application.
 
-## **Use Lazy Loading**
+## **9\. Use Lazy Loading**
 
 Lazy loading is a technique that allows you to load parts of your Angular application on demand, rather than loading everything at once. This can help improve the performance of your application, especially for large or complex applications.
 
 To use lazy loading in your Angular application, you'll need to use the `loadChildren` property of the `Route` object to specify the module and component that should be loaded when the route is activated.
 
-## **Use Testing**
+## **10\. Use Testing**
 
 Testing is an important part of the development process and helps ensure that your code is correct and reliable. Angular provides a number of tools and features that make it easy to test your code, including the Angular Testing Library and the Jasmine testing framework.
 
