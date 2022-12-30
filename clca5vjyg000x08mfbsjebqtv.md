@@ -2,7 +2,7 @@
 
 One of the key features of [ASP.NET](http://ASP.NET) Core is its use of middleware, which is a set of components that handle requests and responses in the application pipeline. Middleware is responsible for tasks such as logging, authentication, and authorization, and it allows developers to customize the request-response pipeline to meet their specific needs.
 
-# **Creating a Custom Middleware in** [**ASP.NET**](http://ASP.NET) **Core**
+## **Creating a Custom Middleware in** [**ASP.NET**](http://ASP.NET) **Core**
 
 Creating a custom middleware in [ASP.NET](http://ASP.NET) Core is straightforward and involves just a few steps. Here's how to do it:
 
@@ -43,7 +43,7 @@ app.UseMiddleware<LoggingMiddleware>();
 
 This will add the `LoggingMiddleware` to the pipeline, and it will be executed for every incoming request.
 
-# **Using Dependency Injection with Custom Middleware**
+## **Using Dependency Injection with Custom Middleware**
 
 [ASP.NET](http://ASP.NET) Core includes built-in support for dependency injection, which allows you to easily inject services into your middleware class. For example, you can inject the `ILogger` service into the `LoggingMiddleware` class, as shown in the example above. This allows you to easily use the logging service in your middleware without having to manually resolve it.
 
@@ -53,7 +53,7 @@ To use dependency injection with your custom middleware, you need to add it to t
 services.AddTransient<LoggingMiddleware>();
 ```
 
-# **Ordering Middleware in the Pipeline**
+## **Ordering Middleware in the Pipeline**
 
 The order in which middleware is added to the pipeline is important, as it determines the order in which the middleware will be executed. In general, you should add middleware that performs tasks such as logging and error handling at the beginning of the pipeline, and middleware that performs tasks such as authentication and authorization towards the end of the pipeline.
 
@@ -200,6 +200,6 @@ This will add the error handling middleware to the pipeline, and it will be exec
 
 With this setup, any exceptions that are thrown during the processing of the request will be caught by the error handling middleware, and a custom error response will be returned to the client. This allows you to handle errors in a consistent and controlled manner, and it helps to ensure that the client receives a useful error message rather than a default error page.
 
-# **Conclusion**
+## **Conclusion**
 
 Custom middleware is a powerful feature of [ASP.NET](http://ASP.NET) Core that allows you to customize the request-response pipeline to meet your specific needs. By creating your own middleware and adding it to the pipeline, you can easily perform tasks such as logging, authentication, and authorization in your application. Using dependency injection with custom middleware also allows you to easily inject services into your middleware class, making it easier to use these services within your middleware. By carefully ordering your middleware in the pipeline, you can ensure that the middleware is executed in the correct order to meet the needs of your application.
