@@ -86,7 +86,6 @@ In this example:
 * `arr: T[]` is the argument of the method, which is an array of type `T`.
     
     * `: T` is the return type of the method, which is also of type `T`.
-        
     
     We can then use this function like this:
     
@@ -121,7 +120,7 @@ In this example:
     * `: {[key: string]: T}` is the return type of the method, which is an object with a string key and a value of type `T`.
         
     
-    We can then use this function like this:
+We can then use this function like this:
     
     ```typescript
     let defaultNumber = createObjectWithDefaults(0); // { default: 0 }
