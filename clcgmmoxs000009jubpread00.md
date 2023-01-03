@@ -6,13 +6,13 @@ Caching can significantly improve the performance of a system by reducing the nu
 
 In this article, we will see how to create a simple cache system in C#.
 
-## **Implementing the Cache**
+## **Implementation**
 
 There are different ways to implement a cache in C#. In this section, we will use a `Dictionary` object to store the data in the cache.
 
 First, let's define the `Cache` class:
 
-```typescript
+```csharp
 public class Cache
 {
     private readonly Dictionary<string, object> _cacheData;
@@ -28,7 +28,7 @@ The `Cache` class has a private field `_cacheData` of type `Dictionary<string, o
 
 We can add a method to the `Cache` class to add data to the cache:
 
-```typescript
+```csharp
 public void Add(string key, object data)
 {
     if (_cacheData.ContainsKey(key))
@@ -46,7 +46,7 @@ The `Add` method takes a `key` and the actual `data` as arguments. It checks if 
 
 We can also add a method to retrieve data from the cache:
 
-```typescript
+```csharp
 public object Get(string key)
 {
     if (_cacheData.ContainsKey(key))
@@ -66,7 +66,7 @@ In a cache system, we usually want to store data temporarily and discard it afte
 
 First, let's add a field to the `Cache` class to store the expiry time of the data:
 
-```typescript
+```csharp
 private readonly Dictionary<string, (object, DateTime)> _cacheData;
 ```
 
@@ -74,7 +74,7 @@ Now, the value of the dictionary will be a tuple containing the actual data and 
 
 We can update the `Add` method to accept an expiry time as an argument:
 
-```typescript
+```csharp
 public void Add(string key, object data, TimeSpan expiry)
 {
     if (_cacheData.ContainsKey(key))
@@ -90,7 +90,7 @@ public void Add(string key, object data, TimeSpan expiry)
 
 We also need to update the `Get` method to check the expiry time of the data before returning it:
 
-```typescript
+```csharp
 public object Get(string key)
 {
     if (_cacheData.ContainsKey(key))
@@ -114,13 +114,13 @@ Let's see an example of how to use the `Cache` class.
 
 First, let's create an instance of the `Cache` class:
 
-```typescript
+```csharp
 var cache = new Cache();
 ```
 
 Now, let's add some data to the cache:
 
-```typescript
+```csharp
 cache.Add("key1", "value1", TimeSpan.FromMinutes(10));
 cache.Add("key2", "value2", TimeSpan.FromMinutes(20));
 cache.Add("key3", "value3", TimeSpan.FromMinutes(30));
@@ -128,7 +128,7 @@ cache.Add("key3", "value3", TimeSpan.FromMinutes(30));
 
 We can retrieve the data from the cache using the `Get` method:
 
-```typescript
+```csharp
 var value1 = cache.Get("key1");
 var value2 = cache.Get("key2");
 var value3 = cache.Get("key3");
