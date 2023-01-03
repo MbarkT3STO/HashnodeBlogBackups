@@ -51,44 +51,6 @@ In this example:
     
 * `: T[]` is the return type of the method, which is also an array of type T.
     
-
-```typescript
-let numbers = [1, 2, 3];
-let reversedNumbers = reverseArray(numbers); // [3, 2, 1]
-
-let strings = ['a', 'b', 'c'];
-let reversedStrings = reverseArray(strings); // ['c', 'b', 'a']
-```
-
-## **Example 2: A Generic Function for Finding the Maximum Element in an Array**
-
-In this example, we will create a generic function that can find the maximum element in an array of any data type that can be compared using the `>` operator.
-
-```typescript
-function findMax<T>(arr: T[]): T {
-  let max = arr[0];
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-    }
-  }
-  return max;
-}
-```
-
-In this example:
-
-* `findMax` is the name of the method.
-    
-* `<T>` is the generic type parameter, which can be used as a placeholder for the actual data type of the array.
-    
-* `arr: T[]` is the argument of the method, which is an array of type `T`.
-    
-    * `: T` is the return type of the method, which is also of type `T`.
-        
-    
-    We can then use this function like this:
-    
     ## **Example 3: A Generic Function for Creating an Object with Default Values**
     
     In this example, we will create a generic function that can create an object with default values for a specific data type.
