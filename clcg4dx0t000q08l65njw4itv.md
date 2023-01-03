@@ -4,7 +4,7 @@ In TypeScript, a generic method is a type of function that can work with multipl
 
 To create a generic method in TypeScript, we need to use the `<T>` syntax, where `T` is a placeholder for the type that will be specified later. We can then use `T` throughout the method as a placeholder for the actual data type.
 
-# **Syntax for Creating a Generic Method**
+## **Syntax for Creating a Generic Method**
 
 Here is the syntax for creating a generic method in TypeScript:
 
@@ -27,11 +27,11 @@ In this syntax:
 * `: T` is the return type of the method, which is also of type `T`
     
 
-# **Examples of Generic Methods**
+## **Examples of Generic Methods**
 
 Here are some examples of generic methods in TypeScript:
 
-## **Example 1: A Generic Function for Reversing an Array**
+### **Example 1: A Generic Function for Reversing an Array**
 
 In this example, we will create a generic function that can reverse an array of any data type.
 
@@ -51,9 +51,45 @@ In this example:
     
 * `: T[]` is the return type of the method, which is also an array of type T.
     
-    ## **Example 3: A Generic Function for Creating an Object with Default Values**
+    ### **Example 2: A Generic Function for Finding the Maximum Element in an Array**
     
-    In this example, we will create a generic function that can create an object with default values for a specific data type.
+    In this example, we will create a generic function that can find the maximum element in an array of any data type that can be compared using the `>` operator.
+    
+    ```typescript
+    function findMax<T>(arr: T[]): T {
+      let max = arr[0];
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+          max = arr[i];
+        }
+      }
+      return max;
+    }
+    ```
+    
+    In this example:
+    
+* `findMax` is the name of the method.
+    
+* `<T>` is the generic type parameter, which can be used as a placeholder for the actual data type of the array.
+    
+* `arr: T[]` is the argument of the method, which is an array of type **T**  
+    `: T` is the return type of the method, which is also of type `T`.
+    
+
+We can then use this function like this:
+
+```typescript
+let numbers = [1, 2, 3];
+let maxNumber = findMax(numbers); // 3
+
+let strings = ['a', 'b', 'c'];
+let maxString = findMax(strings); // 'c'
+```
+
+### **Example 3: A Generic Function for Creating an Object with Default Values**
+
+* In this example, we will create a generic function that can create an object with default values for a specific data type.
     
     ```typescript
     function createObjectWithDefaults<T>(defaultValue: T): {[key: string]: T} {
@@ -99,11 +135,11 @@ In this syntax:
 * `T extends ConstraintType` is the constraint that specifies that the generic type parameter `T` must be a subtype of `ConstraintType`.
     
 
-# **Examples of Constraints in Generic Methods**
+## **Examples of Constraints in Generic Methods**
 
 Here are some examples of how we can use constraints in generic methods:
 
-## **Example 1: A Generic Function for Checking if an Element is in an Array**
+### **Example 1: A Generic Function for Checking if an Element is in an Array**
 
 In this example, we will create a generic function that can check if an element is in an array. We will use a constraint to specify that the element and the array must be of the same type.
 
@@ -138,7 +174,7 @@ let includesString = includes(strings, 'b'); // true
 let doesNotIncludeString = includes(strings, 'd'); // false
 ```
 
-## **Example 2: A Generic Function for Cloning an Object**
+### **Example 2: A Generic Function for Cloning an Object**
 
 In this example, we will create a generic function that can clone an object. We will use a constraint to specify that the object must have a `clone()` method that returns a copy of the object.
 
