@@ -89,14 +89,6 @@ In this example:
     
     We can then use this function like this:
     
-    ```typescript
-    let numbers = [1, 2, 3];
-    let maxNumber = findMax(numbers); // 3
-    
-    let strings = ['a', 'b', 'c'];
-    let maxString = findMax(strings); // 'c'
-    ```
-    
     ## **Example 3: A Generic Function for Creating an Object with Default Values**
     
     In this example, we will create a generic function that can create an object with default values for a specific data type.
