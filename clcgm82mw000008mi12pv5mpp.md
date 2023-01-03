@@ -44,7 +44,7 @@ class Stack<T> {
 
 The `Stack` class has a private array `items` of type `T[]` to store the elements. It also has two methods: `push` to add an element to the stack and `pop` to remove and return the last element.
 
-# **Usage**
+## **Usage**
 
 To use the `Stack` class, we need to specify the type of the elements it will contain. For example, if we want to create a stack of numbers, we can do the following:
 
