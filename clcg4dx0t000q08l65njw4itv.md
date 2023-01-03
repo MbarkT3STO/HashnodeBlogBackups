@@ -49,9 +49,9 @@ In this example:
     
 * `arr: T[]` is the argument of the method, which is an array of type `T`.
     
-* `: T[]` is the return type of the method, which is also an array of type T
+* `: T[]` is the return type of the method, which is also an array of type T.
     
-We can then use this function like this:
+
 
 ```typescript
 let numbers = [1, 2, 3];
