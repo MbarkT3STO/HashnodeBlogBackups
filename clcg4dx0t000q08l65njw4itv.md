@@ -52,7 +52,6 @@ In this example:
 * `: T[]` is the return type of the method, which is also an array of type T.
     
 
-
 ```typescript
 let numbers = [1, 2, 3];
 let reversedNumbers = reverseArray(numbers); // [3, 2, 1]
@@ -86,6 +85,7 @@ In this example:
 * `arr: T[]` is the argument of the method, which is an array of type `T`.
     
     * `: T` is the return type of the method, which is also of type `T`.
+        
     
     We can then use this function like this:
     
@@ -119,113 +119,113 @@ In this example:
         
     * `: {[key: string]: T}` is the return type of the method, which is an object with a string key and a value of type `T`.
         
-    
+
 We can then use this function like this:
+
+```typescript
+typescript let defaultNumber = createObjectWithDefaults(0); // { default: 0 }
+
+let defaultString = createObjectWithDefaults('Hello'); // { default: 'Hello'}
+```
+
+## Constraints
+
+In TypeScript, we can use constraints to specify the types that a generic type parameter can be. This is useful when we want to restrict the types that a generic type parameter can accept or when we want to use certain methods or properties of a type within the generic method.
+
+To specify constraints, we use the `extends` keyword followed by the type that we want to use as a constraint. For example:
+
+```typescript
+function methodName<T extends ConstraintType>(arg1: T): T {
+  // function body
+}
+```
+
+In this syntax:
+
+* `T extends ConstraintType` is the constraint that specifies that the generic type parameter `T` must be a subtype of `ConstraintType`.
     
-    ```typescript
-    let defaultNumber = createObjectWithDefaults(0); // { default: 0 }
+
+# **Examples of Constraints in Generic Methods**
+
+Here are some examples of how we can use constraints in generic methods:
+
+## **Example 1: A Generic Function for Checking if an Element is in an Array**
+
+In this example, we will create a generic function that can check if an element is in an array. We will use a constraint to specify that the element and the array must be of the same type.
+
+```typescript
+function includes<T>(arr: T[], element: T): boolean {
+  return arr.includes(element);
+}
+```
+
+In this example:
+
+* `includes` is the name of the method.
     
-    let defaultString = createObjectWithDefaults('Hello'); // { default: 'Hello' }
-    ```
+* `<T>` is the generic type parameter, which can be used as a placeholder for the actual data type of the array and element.
     
-    ## Constraints
+* `arr: T[]` is the first argument of the method, which is an array of type `T`.
     
-    In TypeScript, we can use constraints to specify the types that a generic type parameter can be. This is useful when we want to restrict the types that a generic type parameter can accept or when we want to use certain methods or properties of a type within the generic method.
+* `element: T` is the second argument of the method, which is of type `T`.
     
-    To specify constraints, we use the `extends` keyword followed by the type that we want to use as a constraint. For example:
+* `: boolean` is the return type of the method, which is a boolean value indicating whether the element is in the array or not.
     
-    ```typescript
-    function methodName<T extends ConstraintType>(arg1: T): T {
-      // function body
-    }
-    ```
+
+We can then use this function like this:
+
+```typescript
+let numbers = [1, 2, 3];
+let includesNumber = includes(numbers, 2); // true
+let doesNotIncludeNumber = includes(numbers, 4); // false
+
+let strings = ['a', 'b', 'c'];
+let includesString = includes(strings, 'b'); // true
+let doesNotIncludeString = includes(strings, 'd'); // false
+```
+
+## **Example 2: A Generic Function for Cloning an Object**
+
+In this example, we will create a generic function that can clone an object. We will use a constraint to specify that the object must have a `clone()` method that returns a copy of the object.
+
+```typescript
+function clone<T extends { clone(): T }>(object: T): T {
+  return object.clone();
+}
+```
+
+In this example:
+
+* `clone` is the name of the method.
     
-    In this syntax:
+* `<T extends { clone(): T }>` is the generic type parameter and constraint, which specifies that `T` must have a `clone()` method that returns a value of type `T`.
     
-    * `T extends ConstraintType` is the constraint that specifies that the generic type parameter `T` must be a subtype of `ConstraintType`.
-        
+* `object: T` is the argument of the method, which is an object of type `T`.
     
-    # **Examples of Constraints in Generic Methods**
+* `: T` is the return type of the method, which is a copy of the object of type `T`.
     
-    Here are some examples of how we can use constraints in generic methods:
-    
-    ## **Example 1: A Generic Function for Checking if an Element is in an Array**
-    
-    In this example, we will create a generic function that can check if an element is in an array. We will use a constraint to specify that the element and the array must be of the same type.
-    
-    ```typescript
-    function includes<T>(arr: T[], element: T): boolean {
-      return arr.includes(element);
-    }
-    ```
-    
-    In this example:
-    
-    * `includes` is the name of the method.
-        
-    * `<T>` is the generic type parameter, which can be used as a placeholder for the actual data type of the array and element.
-        
-    * `arr: T[]` is the first argument of the method, which is an array of type `T`.
-        
-    * `element: T` is the second argument of the method, which is of type `T`.
-        
-    * `: boolean` is the return type of the method, which is a boolean value indicating whether the element is in the array or not.
-        
-    
-    We can then use this function like this:
-    
-    ```typescript
-    let numbers = [1, 2, 3];
-    let includesNumber = includes(numbers, 2); // true
-    let doesNotIncludeNumber = includes(numbers, 4); // false
-    
-    let strings = ['a', 'b', 'c'];
-    let includesString = includes(strings, 'b'); // true
-    let doesNotIncludeString = includes(strings, 'd'); // false
-    ```
-    
-    ## **Example 2: A Generic Function for Cloning an Object**
-    
-    In this example, we will create a generic function that can clone an object. We will use a constraint to specify that the object must have a `clone()` method that returns a copy of the object.
-    
-    ```typescript
-    function clone<T extends { clone(): T }>(object: T): T {
-      return object.clone();
-    }
-    ```
-    
-    In this example:
-    
-    * `clone` is the name of the method.
-        
-    * `<T extends { clone(): T }>` is the generic type parameter and constraint, which specifies that `T` must have a `clone()` method that returns a value of type `T`.
-        
-    * `object: T` is the argument of the method, which is an object of type `T`.
-        
-    * `: T` is the return type of the method, which is a copy of the object of type `T`.
-        
-    
-    We can then use this function like this:
-    
-    ```typescript
-    class Point {
-      x: number;
-      y: number;
-    
-      constructor(x: number, y: number) {
-        this.x = x;
-        this.y = y;
-      }
-    }
-    ```
-    
-    We can then use this function like this:
-    
-    ```typescript
-    let point1 = new Point(1, 2);
-    let point2 = clone(point1); // point2 is a copy of point1
-    ```
-    
-    # **Conclusion**
-    
-    In this article, we learned about generic methods in TypeScript and how to create them using the `<T>` syntax. We also saw some examples of generic methods, such as a function for reversing an array, finding the maximum element in an array, and creating an object with default values. Generic methods are a useful feature of TypeScript that allow us to create functions that can work with multiple data types.
+
+We can then use this function like this:
+
+```typescript
+class Point {
+  x: number;
+  y: number;
+
+  constructor(x: number, y: number) {
+    this.x = x;
+    this.y = y;
+  }
+}
+```
+
+We can then use this function like this:
+
+```typescript
+let point1 = new Point(1, 2);
+let point2 = clone(point1); // point2 is a copy of point1
+```
+
+## **Conclusion**
+
+In this article, we learned about generic methods in TypeScript and how to create them using the `<T>` syntax. We also saw some examples of generic methods, such as a function for reversing an array, finding the maximum element in an array, and creating an object with default values. Generic methods are a useful feature of TypeScript that allow us to create functions that can work with multiple data types.
