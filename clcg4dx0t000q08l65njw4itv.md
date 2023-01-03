@@ -24,10 +24,10 @@ In this syntax:
     
 * `arg1: T` is the argument of the method, which has a type of `T`.
     
-* `: T` is the return type of the method, which is also of type `T`.
+* `: T` is the return type of the method, which is also of type `T`
     
 
-# **Examples of Generic Methods in TypeScript**
+# **Examples of Generic Methods**
 
 Here are some examples of generic methods in TypeScript:
 
