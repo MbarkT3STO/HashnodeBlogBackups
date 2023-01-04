@@ -20,7 +20,7 @@ Here, `expression` is an Angular expression that returns an object with style pr
 
 You can also bind the ngStyle directive to a component property and use it to set the style of the element. For example:
 
-```xml
+```typescript
 import { Component } from '@angular/core';
 
 @Component({
