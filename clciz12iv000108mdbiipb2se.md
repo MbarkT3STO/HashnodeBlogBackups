@@ -327,16 +327,16 @@ StockData stockData = new StockData
 stockExchange.StockData = stockData;
 ```
 
-## **Advantages of the Observer Design Pattern**
+## **Advantages**
 
 * Loose coupling: The observer design pattern allows objects to communicate with each other without requiring a tight coupling between them. This makes it easier to change the implementation of one object without affecting the other objects that depend on it.
     
 * Extensibility: The observer design pattern makes it easy to add new observers to a system without requiring any changes to the subject or other observers. This can be useful when you need to extend the functionality of a system but do not want to make changes to the existing code.
     
-    * Reusability: The observer design pattern allows you to reuse the subject and observer classes in other systems. This can be useful when you have similar requirements in different parts of a system or in different systems altogether.
+    * Reusability: The observer design pattern allows you to reuse the subject and observer classes in other systems. This can be useful when you have similar requirements in different parts of a system or in different systems altogether.  
         
-    
-    ## **Disadvantages of the Observer Design Pattern**
+
+* ## **Disadvantages**
     
     * Performance: Notifying all of the observers when the state of the subject changes can have a negative impact on the performance of a system, especially if there are many observers. This can be mitigated by using techniques such as lazy evaluation or using weak references to avoid keeping unnecessary references to the observers.
         
