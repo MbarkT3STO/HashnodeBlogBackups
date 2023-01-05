@@ -15,7 +15,7 @@ The observer design pattern consists of three main components:
 
 When the state of the subject changes, it sends a notification to all of its observers. The observers can then use this notification to update their own state or perform some other action.
 
-## **Example**
+## **Implementation 1**
 
 Here is an example of the observer design pattern in C#:
 
@@ -93,6 +93,59 @@ public class Observer : IObserver
 ```
 
 To use the observer design pattern in this example, the client would create a `Subject` object and one or more `Observer` objects. The client would then set the state of the subject, which would trigger a notification to be sent to all of the observers. The observers would update their own state in response to this notification.
+
+## Implementation 2
+
+Here is another way to implement the Observer pattern using C#:
+
+```csharp
+public interface IObserver
+{
+    void Update(ISubject subject);
+}
+
+public interface ISubject
+{
+    void RegisterObserver(IObserver observer);
+    void RemoveObserver(IObserver observer);
+    void NotifyObservers();
+}
+
+public class Subject : ISubject
+{
+    private List<IObserver> observers = new List<IObserver>();
+
+    public void RegisterObserver(IObserver observer)
+    {
+        observers.Add(observer);
+    }
+
+    public void RemoveObserver(IObserver observer)
+    {
+        observers.Remove(observer);
+    }
+
+    public void NotifyObservers()
+    {
+        foreach (IObserver observer in observers)
+        {
+            observer.Update(this);
+        }
+    }
+}
+
+public class Observer : IObserver
+{
+    public void Update(ISubject subject)
+    {
+        // Update the state of the observer based on the state of the subject
+    }
+}
+```
+
+In this implementation, the `Subject` class maintains a list of `Observer` objects and provides methods for registering and unregistering observers. The `NotifyObservers` method iterates through the list of observers and calls the `Update` method on each observer. The `Observer` class implements the `Update` method, which is called by the subject when its state changes.
+
+This is just one way to implement the Observer pattern, and there are many variations and alternatives.
 
 ## Real-World Examples
 
