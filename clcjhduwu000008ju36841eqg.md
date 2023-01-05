@@ -34,7 +34,7 @@ In this example, the `IsEvenAsync` method returns a `ValueTask` that represents 
 
 ## Real-World Examples
 
-## **Example 1: Asynchronous HTTP Request**
+### **Example 1: Asynchronous HTTP Request**
 
 The following example shows how to use the `Task` class to asynchronously make an HTTP request and retrieve the response as a string:
 
@@ -50,7 +50,7 @@ public async Task<string> GetResponseAsync(string url)
 
 In this example, the `GetResponseAsync` method returns a `Task` that represents the asynchronous operation of making an HTTP request and retrieving the response. The `await` keyword is used to pause the execution of the method until the response is received.
 
-## **Example 2: Asynchronous File Access**
+### **Example 2: Asynchronous File Access**
 
 The following example shows how to use the `ValueTask` class to asynchronously check if a file exists:
 
