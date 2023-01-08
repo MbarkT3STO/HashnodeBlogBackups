@@ -54,7 +54,7 @@ When the component is rendered, the user can click the button to increment the v
 For example, if the user clicks the button three times, the template will display the following:
 
 ```xml
-Copy code<button (click)="incrementCount()">Click me</button>
+<button (click)="incrementCount()">Click me</button>
 <p>Count: 3</p>
 ```
 
