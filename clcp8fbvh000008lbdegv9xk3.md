@@ -4,6 +4,8 @@ JWT (JSON Web Token) is an open standard for securely transmitting information b
 
 ## **How does JWT work?**
 
+![A Primer on JSON Web Tokens | PSPDFKit](https://pspdfkit.com/assets/images/blog/2021/a-primer-on-json-web-tokens/authorization-flow-bd7f07f4.png align="center")
+
 A JWT consists of three parts: a header, a payload, and a signature. The header typically consists of two parts: the type of the token, which is JWT, and the signing algorithm being used, such as HMAC SHA256 or RSA. The payload contains the claims. Claims are statements about an entity (typically, the user) and additional data. There are three types of claims: registered, public, and private claims.
 
 The signature is used to verify that the sender of the JWT is who it says it is and to ensure that the message wasn't changed along the way.
