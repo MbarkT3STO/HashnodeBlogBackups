@@ -8,6 +8,8 @@ In this article, we'll explore how to implement CQRS in an [ASP.NET](http://ASP.
 
 ## **Understanding CQRS**
 
+![A Simple Step-by-Step Guide To CQRS in MVC Web API (with MediatR) - YouTube](https://i.ytimg.com/vi/bgoGtkmUAQg/maxresdefault.jpg align="center")
+
 In a traditional software system, the same database or data store is used for both read and write operations. This can lead to bottlenecks and performance issues as the volume of requests increases.
 
 CQRS seeks to solve this problem by separating the read and write operations into two separate models. The read model is optimized for querying data, while the write model is optimized for storing and updating data.
