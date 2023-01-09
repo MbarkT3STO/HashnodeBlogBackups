@@ -4,6 +4,8 @@ One feature that is often used in [ASP.NET](http://ASP.NET) Core is JSON Web Tok
 
 ## **What is a JSON Web Token (JWT)?**
 
+Even though we talked before about [What is JWT?](https://mbarkt3sto.hashnode.dev/what-is-jwt) , its okay to talk about it again in a brief way.
+
 A JSON Web Token (JWT) is a JSON-based open standard that is used to securely transmit information between parties. The information contained in a JWT is encoded as a JSON object and signed using a digital signature.
 
 JWTs are often used as a means of authentication and authorization in web applications. They are self-contained, meaning that they contain all the necessary information about the user and their permissions in a single token. This makes them easy to use and maintain, as there is no need to store user information in a database or other external system.
