@@ -1,4 +1,4 @@
-# How to Generate a JWT in ASP.NET Core API with Identity and EF Core
+# How to Generate a JWT in ASP.NET Core API with Identity and EF Core?
 
 We talked before about [What is JWT](https://mbarkt3sto.hashnode.dev/what-is-jwt) and [**What is JWT Bearer in**](https://mbarkt3sto.hashnode.dev/what-is-jwt-bearer-in-aspnet-core) [**ASP.Net**](http://ASP.Net) [**Core?**](https://mbarkt3sto.hashnode.dev/what-is-jwt-bearer-in-aspnet-core), but it is not a bad idea to repeat a brief introduction to it.
 
@@ -109,7 +109,7 @@ The above code will register our `ApplicationDbContext` and `Identity` services 
 
 Now that we have registered the services, we need to configure our API to use them for authentication. This can be done by adding the following code to the `Configure` method in the `Startup.cs` file:
 
-```
+```csharp
 app.UseAuthentication();
 app.UseAuthorization();
 ```
@@ -170,7 +170,7 @@ It contains two properties, `Username` and `Password`, both of which are strings
 
 It could have other properties as well, like Email or any other property related to your authentication system. You could also have validation rules in the class properties using DataAnnotations to ensure that the input data is valid, but I left them out of this example for brevity.
 
-## A Real-World Example:
+## A Real-World Example
 
 It's great that you would like to have a complete real-world example of JWT in [ASP.NET](http://ASP.NET) Core API with Identity Core and EF Core, so I will provide you with an example that you can use as a starting point for your own project. Please note that you may need to adjust the code for your specific requirements and best practice.
 
