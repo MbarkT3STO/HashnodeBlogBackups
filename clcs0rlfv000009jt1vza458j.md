@@ -78,6 +78,9 @@ In your `appsettings.json` file, you would define the values for the "Jwt:Issuer
     "Audience": "your_audience",
     "Key": "your_secret_key"
   },
+  "ConnectionStrings": {
+    "DefaultConnection": "Your database connection here"
+  },
   "Logging": {
     "LogLevel": {
       "Default": "Information",
