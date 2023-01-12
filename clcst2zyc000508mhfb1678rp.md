@@ -1,4 +1,4 @@
-# A Complete Example about using JWT in ASP.NET Core with Identity and EF Core
+# A Comprehensive Example: Implementing JWT Authentication in ASP.NET Core with Identity and EF Core
 
 We talked before about :
 
