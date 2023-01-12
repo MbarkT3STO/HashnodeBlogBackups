@@ -22,6 +22,8 @@ To get started, create a new [ASP.NET](http://ASP.NET) Core web application and 
     
 * `Microsoft.EntityFrameworkCore.SqlServer`
     
+* `Microsoft.AspNetCore.Identity.EntityFrameworkCore`
+    
 
 We will be using SQL Server as the database for this example, but EF Core supports many other database providers as well.
 
