@@ -406,7 +406,7 @@ Then you can use the `http.get` method to make a GET request to the endpoint tha
 
 ```typescript
 ngOnInit() {
-  this.http.get<Student[]>('/api/student').subscribe(
+  this.http.get<Student[]>('/api/student/students').subscribe(
     data => {
       this.students = data;
     },
@@ -417,13 +417,13 @@ ngOnInit() {
 }
 ```
 
-It's important to note that the above code snippet assumes that the `GetStudents` method is exposed on the `/api/student` endpoint.
+It's important to note that the above code snippet assumes that the `GetStudents` method is exposed on the `/api/student/students` endpoint.
 
 Also, you need to make sure that you are sending the JWT token with the request, this could be done by adding the token in the header of the request.
 
 ```typescript
 ngOnInit() {
-  this.http.get<Student[]>('/api/student', {
+  this.http.get<Student[]>('/api/student/students', {
     headers: new HttpHeaders({
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     })
@@ -447,7 +447,7 @@ import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 
 ngOnInit() {
-  this.http.get<Student[]>('/api/student', {
+  this.http.get<Student[]>('/api/student/students', {
     headers: new HttpHeaders({
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     })
