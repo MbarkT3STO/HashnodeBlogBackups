@@ -471,3 +471,5 @@ ngOnInit() {
 ```
 
 By consuming the `GetStudents` method from an Angular component, you can retrieve the students list and display it in the view. This allows you to create a dynamic and interactive user interface that is updated in real-time with the data from the server.
+
+**You can access and download an example project that I personally created to supplement this topic by clicking on this** [**link**](https://github.com/MbarkT3STO/JWTExample)**.**
