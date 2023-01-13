@@ -8,7 +8,7 @@ Cross-Origin Resource Sharing (CORS) is a security feature implemented by web br
 
 To enable CORS in an [ASP.NET](http://ASP.NET) Core web application, you can use the `UseCors` method in the `Startup` class. The following example shows how to enable CORS for all origins, headers, and methods:
 
-```typescript
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddCors();
@@ -30,7 +30,7 @@ public void Configure(IApplicationBuilder app)
 
 You can also configure CORS to only allow specific origins, headers, and methods. The following example shows how to allow requests from [`http://example.com`](http://example.com) and [`http://www.example.com`](http://www.example.com), with the `Content-Type` header, and the `GET` and `POST` methods:
 
-```typescript
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddCors();
