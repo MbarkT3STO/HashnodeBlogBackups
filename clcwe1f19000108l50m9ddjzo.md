@@ -4,7 +4,7 @@ One of the key features of [ASP.NET](http://ASP.NET) Core is its support for dep
 
 One of the classes that is commonly used in conjunction with dependency injection is the `IOptions<T>` interface. This interface allows developers to access and manage configuration options for their application in a strongly-typed manner.
 
-## **How IOptions&lt;T&gt; Works**
+## **How IOptions&lt;T&gt; Works?**
 
 The `IOptions<T>` interface is used to access and manage configuration options for an application. The `T` generic parameter specifies the type of the options that are being managed. For example, if you have an application that needs to access a set of options related to email settings, you might define a `EmailOptions` class to represent those settings and use `IOptions<EmailOptions>` to access them.
 
