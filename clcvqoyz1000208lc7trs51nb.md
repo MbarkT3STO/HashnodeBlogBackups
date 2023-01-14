@@ -166,3 +166,5 @@ If the access token is expired, the user can use the refresh token to obtain a n
 Note that, you should implement the `RefreshTokenRequest` and `GenerateAccessToken` yourself.
 
 It's important to note that in a production application, you should also handle cases such as invalidating the refresh token after a certain number of uses or a certain period of time to ensure that the tokens can't be used indefinitely.
+
+You can download a complete, straightforward project that implements the Refresh Token mechanism from [this link](https://github.com/MbarkT3STO/JWTExample/tree/Refresh-Token-Example).
