@@ -1,8 +1,8 @@
-# Introduction to IOptions<T> in ASP.NET Core
+# Understanding the IOptions<T> in ASP.NET Core
 
 One of the key features of [ASP.NET](http://ASP.NET) Core is its support for dependency injection (DI), which allows developers to easily manage the dependencies of their application.
 
-One of the classes that is commonly used in conjunction with dependency injection is the `IOptions<T>` interface. This interface allows developers to access and manage configuration options for their application in a strongly-typed manner.
+One of the classes/interfaces that is commonly used in conjunction with dependency injection is the `IOptions<T>` interface. This interface allows developers to access and manage configuration options for their application in a strongly-typed manner.
 
 ## **How IOptions&lt;T&gt; Works?**
 
