@@ -163,50 +163,6 @@ In this example, the `Secure` action is decorated with the `Authorize` attribute
 
 If the access token is expired, the user can use the refresh token to obtain a new access token. The user can make a request to the `RefreshAccessToken` action with the refresh token, and if the token is valid, the server will generate a new access token and return it to the user. The user can then use this new access token to make a request to the `Secure` action, and the server will grant them access.
 
-```csharp
-[HttpPost("refresh")]
-public async Task<IActionResult> RefreshAccessToken([FromBody] RefreshTokenRequest request)
-{
-    var user = await _userManager.FindByIdAsync(request.UserId);
-    if (user == null)
-    {
-        return BadRequest(new { message = "Invalid user" });
-    }
-
-    var refreshToken = _context.RefreshTokens.SingleOrDefault(rt => rt.Token == request.RefreshToken && rt.UserId == request.UserId);
-    if (refreshToken == null)
-    {
-        return BadRequest(new { message = "Invalid refresh token" });
-    }
-
-    if (refreshToken.Used)
-    {
-        return BadRequest(new { message = "Refresh token already used" });
-    }
-
-    if (refreshToken.Invalidated)
-    {
-        return BadRequest(new { message = "Refresh token invalidated" });
-    }
-
-    if (refreshToken.ExpiryDate < DateTime.UtcNow)
-    {
-        return BadRequest(new { message = "Refresh token expired" });
-    }
-
-    refreshToken.Used = true;
-    _context.RefreshTokens.Update(refreshToken);
-    await _context.SaveChangesAsync();
-
-    var accessToken = GenerateAccessToken(user);
-    return Ok(new
-    {
-        access_token = accessToken,
-        refresh_token = request.RefreshToken
-    });
-}
-```
-
 Note that, you should implement the `RefreshTokenRequest` and `GenerateAccessToken` yourself.
 
 It's important to note that in a production application, you should also handle cases such as invalidating the refresh token after a certain number of uses or a certain period of time to ensure that the tokens can't be used indefinitely.
