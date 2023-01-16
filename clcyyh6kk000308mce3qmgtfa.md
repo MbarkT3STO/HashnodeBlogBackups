@@ -82,7 +82,7 @@ Console.WriteLine(((Person)person).Name); // Output: John Doe
 Console.WriteLine(((Person)person).Age); // Output: 30
 ```
 
-## **Dealing with Properties using Reflection**
+## **Working with Properties using Reflection**
 
 Reflection also allows you to access and manipulate the properties of a type at runtime. This can be useful in scenarios such as serialization, data binding, and dynamic object creation.
 
@@ -349,7 +349,7 @@ Reflection allows you to access and manipulate private members of a type at runt
 
 It's important to keep in mind that when working with private members, it's considered a bad practice to access them, as it breaks encapsulation and can make the code more fragile and harder to maintain. However, in some cases, it may be necessary to use reflection to access private members, such as for unit testing or for creating dynamic proxies.
 
-## **Accessing Private Fields**
+### **Accessing Private Fields**
 
 You can access private fields by using the `Type.GetField(string, BindingFlags)` method and passing the field name and a `BindingFlags` enumeration that includes `BindingFlags.NonPublic` and `BindingFlags.Instance` or `BindingFlags.Static` depending on whether the field is an instance or static field.
 
@@ -372,7 +372,7 @@ field.SetValue(instance, "MyValue");
 Console.WriteLine(field.GetValue(instance)); // Output: MyValue
 ```
 
-## **Accessing Private Properties**
+### **Accessing Private Properties**
 
 You can access private properties by using the `Type.GetProperty(string, BindingFlags)` method and passing the property name and a `BindingFlags` enumeration that includes `BindingFlags.NonPublic` and `BindingFlags.Instance` or `BindingFlags.Static` depending on whether the property is an instance or static property.
 
