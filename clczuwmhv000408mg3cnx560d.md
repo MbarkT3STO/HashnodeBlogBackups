@@ -270,7 +270,7 @@ public void MyMethod() { }
 
 Additionally, there are also several other tags that can be used to enhance the documentation and make it more informative.
 
-## `<code>`
+### `<code>`
 
 This tag is used to highlight specific pieces of code within the documentation. This is useful when you want to show an example of how to use a particular method or class.
 
