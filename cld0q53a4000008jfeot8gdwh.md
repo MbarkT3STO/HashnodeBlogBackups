@@ -1,4 +1,4 @@
-# Introduction to Serilog in ASP.NET Core
+# Introduction to Serilog
 
 One of the key features of [ASP.NET](http://ASP.NET) Core is its built-in support for logging, which allows developers to easily track and diagnose issues within their applications. One of the most popular logging frameworks for [ASP.NET](http://ASP.NET) Core is Serilog.
 
