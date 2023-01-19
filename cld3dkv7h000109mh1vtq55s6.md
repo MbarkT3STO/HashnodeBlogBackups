@@ -60,6 +60,40 @@ public class MyController : Controller
 }
 ```
 
+# **Changing the Original Value in appsettings.json**
+
+In addition to changing the values of options during runtime, you can also change the original values in the appsettings.json file.
+
+To do this, you need to update the value in the appsettings.json file and then trigger a reload of the configuration.
+
+Here is an example of how you can change the value of an option in the appsettings.json file and then reload the configuration.
+
+```csharp
+public class MyController : Controller
+{
+    private readonly IConfiguration _config;
+
+    public MyController(IConfiguration config)
+    {
+        _config = config;
+    }
+
+    public IActionResult UpdateOption()
+    {
+        // Update the value in the appsettings.json file
+        _config["MyOptions:Option1"] = "newValue";
+        
+        // Reload the configuration
+        _config.Reload();
+        return Ok();
+    }
+}
+```
+
+It's important to note that not all configuration providers support dynamic reloading of the configuration. For example, the built-in `JsonConfigurationProvider` does not support dynamic reloading. In such cases, you would need to use a third-party library such as `Microsoft.Extensions.Configuration.AzureAppConfiguration` which provides support for dynamic reloading of configuration from Azure App Configuration.
+
+It is also important to note that when you change the values in the appsettings.json file, the changes will only take effect when the application is restarted. If you want to make changes in the appsettings.json during runtime, you need to use a different configuration provider such as Azure App Configuration or Consul.
+
 ## **Differences between IOptionsMonitor&lt;T&gt; and IOptionsSnapshot&lt;T&gt;**
 
 `IOptionsMonitor<T>` and `IOptionsSnapshot<T>` are similar interfaces, but there are some important differences between them.
