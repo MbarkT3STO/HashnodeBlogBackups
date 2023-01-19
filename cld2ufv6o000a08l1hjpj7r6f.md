@@ -2,7 +2,7 @@
 
 The factory design pattern is a creational design pattern that provides a way to create objects without specifying the exact class of object that will be created. This pattern is used in scenarios where a class cannot anticipate the type of objects it must create, or when a class wants to delegate responsibility for object creation to its subclasses.
 
-## **How it works**
+## **How it works?**
 
 The factory pattern consists of a factory class and one or more product classes. The factory class is responsible for creating objects of the product classes, while the product classes define the interface for the objects that the factory class creates.
 
@@ -68,7 +68,7 @@ We can use the factory class to create different types of vehicles without knowi
 
 ## Real-World Examples
 
-### E-Commere App
+### E-Commerce App
 
 Imagine you are building an e-commerce application and want to provide multiple payment options for customers, such as credit card, PayPal, and bank transfer. Instead of creating separate functions for each payment method, a factory class can be used to create objects of the appropriate classes for each payment method.
 
