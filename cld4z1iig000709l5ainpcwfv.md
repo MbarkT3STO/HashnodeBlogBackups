@@ -18,8 +18,8 @@ The `unit` type is used in several scenarios in C#, including:
 
 ```csharp
 public class Example<T> { ... }
-    // T can be any type, but if you want to indicate that it does not matter, you can use `unit`
-    public class Example<T> { ... }
+// T can be any type, but if you want to indicate that it does not matter, you can use `unit`
+public class Example<T> { ... }
 ```
 
 * As a return type for methods or functions that do not return a meaningful value:
@@ -27,21 +27,21 @@ public class Example<T> { ... }
 
 ```csharp
 public void DoSomething() { ... }
-    // `void` can be replaced with `unit` to indicate that the method does not return a meaningful value
-    public unit DoSomething() { ... }
+// `void` can be replaced with `unit` to indicate that the method does not return a meaningful value
+public unit DoSomething() { ... }
 ```
 
 ## **Example**
 
 ```csharp
 public class MyClass
+{
+    public unit MyMethod()
     {
-        public unit MyMethod()
-        {
-            Console.WriteLine("Hello, World!");
-            return unit.Default;
-        }
+        Console.WriteLine("Hello, World!");
+        return unit.Default;
     }
+}
 ```
 
 In this example, we define a class `MyClass` that has a method `MyMethod` which returns `unit`. This method simply writes "Hello, World!" to the console and returns `unit.Default`, which is a special value that represents the default value of the `unit` type.
