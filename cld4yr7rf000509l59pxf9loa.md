@@ -25,7 +25,7 @@ public class Calculator
 
     public int Multiply(int a, int b) => a * b;
 
-    public int Divide(int a, int b) => a / b;
+    public decimal Divide(int a, int b) => a / b;
 }
 ```
 
