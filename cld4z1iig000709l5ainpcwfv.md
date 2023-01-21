@@ -1,4 +1,4 @@
-# The unit Type in C#
+# The Unit Type in C#
 
 ## **What is the** `unit` Type?
 
