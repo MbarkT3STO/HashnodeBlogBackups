@@ -10,6 +10,20 @@ To use FakeItEasy in your .NET Core project, you will first need to install the 
 dotnet add package FakeItEasy
 ```
 
+## `IMyService`
+
+`IMyService` is an interface that defines the methods and properties that the `MyService` class should implement. It could look something like this:
+
+```csharp
+public interface IMyService
+{
+    string GetData();
+    void SaveData(string data);
+}
+```
+
+The `IMyService` interface defines the contract that the `MyService` class must adhere to. In this example, the interface defines four methods: `GetData`and `SaveData`, By using the interface, we can create a test double for the `MyService` class using FakeItEasy. This allows us to write test cases that exercise the methods of the `MyService` class without hitting the actual implementation of the class.
+
 ## **Creating a Test Double**
 
 A test double is a stand-in object that can be used in place of a real object during testing. In FakeItEasy, test doubles are created using the `A.Fake<T>()` method, where `T` is the type of the object you want to create a test double for. For example, to create a test double for an interface called `IMyService`, you would use the following code:
