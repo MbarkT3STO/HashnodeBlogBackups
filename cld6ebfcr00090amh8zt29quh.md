@@ -50,28 +50,6 @@ public void Test_MyService_GetData()
 }
 ```
 
-## **Verifying Interactions**
-
-One of the powerful feature of FakeItEasy is to check if a certain function was called or not and also you can check how many times it was called.
-
-Here is an example of how to check if a method was called on the test double:
-
-```csharp
-[Fact]
-public void Test_MyService_SaveData()
-{
-    // Arrange
-    var myService = A.Fake<IMyService>();
-    var data = "Hello, World!";
-
-    // Act
-    myService.SaveData(data);
-
-    // Assert
-    A.CallTo(() => myService.SaveData(data)).MustHaveHappened();
-}
-```
-
 ## **Conclusion**
 
 FakeItEasy is a powerful library for creating test doubles in .NET. It is easy to use, highly configurable, and provides a wide range of features that make it an excellent choice for any .NET developer.
