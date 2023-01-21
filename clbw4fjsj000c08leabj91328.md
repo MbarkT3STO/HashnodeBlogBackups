@@ -1,4 +1,4 @@
-# How to implement the iterator design pattern in C#
+# The Iterator Design Pattern in C#
 
 ## **Introduction**
 
