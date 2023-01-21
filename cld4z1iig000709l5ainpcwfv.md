@@ -33,7 +33,7 @@ public unit DoSomething() { ... }
 
 ## Important
 
-In order to use the `Unit` struct in your C# project, you will need to first install the Reactive Extension (Rx) library as a NuGet package. The `Unit` struct is part of the `System.Reactive.Linq` namespace, which is included in the Rx library. Without installing this package, you will not have access to the `Unit` struct and its properties such as `Unit.Value`. To install the package, you can use the NuGet Package Manager in your project, or by running the command `Install-Package System.Reactive` in the Package Manager Console. Once the package is installed, you will have access to the `Unit` struct and its properties and can use it in your project.
+In order to use the `Unit` struct in your C# project, you will need to first install the Reactive Extension (Rx) library as a NuGet package. The `Unit` struct is part of the `System.Reactive`namespace, which is included in the Rx library. Without installing this package, you will not have access to the `Unit` struct. To install the package, you can use the NuGet Package Manager in your project, or by running the command `Install-Package System.Reactive` in the Package Manager Console. Once the package is installed, you will have access to the `Unit` struct and its properties and can use it in your project.
 
 ## **Example**
 
