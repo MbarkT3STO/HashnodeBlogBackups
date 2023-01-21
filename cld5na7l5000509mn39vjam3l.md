@@ -76,7 +76,7 @@ It's important to note that, like with methods, deprecated properties will still
 
 ## **Deprecating Classes**
 
-Finally, it's also possible to deprecate classes in C#. Like methods, constructors and properties, classes can be marked as deprecated by using the `[Obsolete]` attribute. Here's an example of deprecating a class:
+It's also possible to deprecate classes in C#. Like methods, constructors and properties, classes can be marked as deprecated by using the `[Obsolete]` attribute. Here's an example of deprecating a class:
 
 ```csharp
 [Obsolete("This class is deprecated, please use the NewClass instead.")]
