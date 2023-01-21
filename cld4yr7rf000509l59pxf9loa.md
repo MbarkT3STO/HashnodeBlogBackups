@@ -1,4 +1,4 @@
-# Noob Introduction to Writing Tests in .NET Core
+# A Noob Introduction to Writing Tests in .NET Core
 
 One of the best features of .NET Core is its built-in support for unit testing. In this article, we will explore how to write tests in .NET Core using the built-in testing framework and the popular xUnit testing library.
 
