@@ -34,7 +34,7 @@ Ocelot is a popular open-source library that can be used to implement an API Gat
 
 ## **Setting up Ocelot in** [**ASP.Net**](http://ASP.Net) **Core**
 
-To set up Ocelot in an [ASP.Net](http://ASP.Net) Core application, you first need to install the Ocelot package using the NuGet package manager. Once you have done that, you can add Ocelot to the `Program.cs` file by adding the following code to the `ConfigureServices` method:
+To set up Ocelot in an [ASP.Net](http://ASP.Net) Core application, you first need to install the Ocelot package using the NuGet package manager. Once you have done that, you can add Ocelot to the `Program.cs` file by adding the following code:
 
 ```csharp
 using Ocelot.DependencyInjection;
@@ -48,8 +48,6 @@ builder.Configuration.AddJsonFile("ocelot.json");
 // Add Ocelot services
 builder.Services.AddOcelot(builder.Configuration);
 ```
-
-This code uses the `ConfigurationBuilder` class to build a configuration object that loads the `ocelot.json` file. Then it uses this configuration object to configure Ocelot by calling the `AddOcelot` method on the `services` collection.
 
 Next, you need to configure the routes for your services. You can do this by creating a `ocelot.json` file in the root of your project and defining the routes for your services. For example, the following configuration will route requests for the `/customers` endpoint to a service called `customer-service`:
 
