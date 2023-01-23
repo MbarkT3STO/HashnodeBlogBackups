@@ -9,10 +9,10 @@ The first step is to set up the `launch.json` file, which is used to configure t
 Here is an example of a `launch.json` file that configures three different projects:
 
 ```json
- "version": "0.2.0",
+  "version": "0.2.0",
   "configurations": [
     {
-      "name": "Customer Service",
+      "name": "Customer Service", // <-- Name of the configuration for the Customer.Service project
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
@@ -32,7 +32,7 @@ Here is an example of a `launch.json` file that configures three different proje
       }
     },
     {
-      "name": "Product Service",
+      "name": "Product Service", // <-- Name of the configuration for the Product.Service project
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
@@ -52,7 +52,7 @@ Here is an example of a `launch.json` file that configures three different proje
       }
     },
     {
-      "name": "Gateway API",
+      "name": "Gateway API", // <-- Name of the configuration for the Gateway.API project
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
