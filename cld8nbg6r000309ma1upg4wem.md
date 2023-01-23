@@ -51,7 +51,7 @@ builder.Services.AddOcelot(builder.Configuration);
 
 Next, you need to configure the routes for your services. You can do this by creating a `ocelot.json` file in the root of your project and defining the routes for your services. For example, the following configuration will route requests for the `/customers` endpoint to a service called `customer-service`:
 
-```csharp
+```json
 {
     "Routes": [
         {
@@ -126,7 +126,7 @@ We will also have an API Gateway project, which is an [ASP.NET](http://ASP.NET) 
 
 For example, the following configuration will route requests for the `/api/products` endpoint to the Product Service:
 
-```csharp
+```json
 {
     "Routes": [
         {
