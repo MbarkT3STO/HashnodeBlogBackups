@@ -68,7 +68,7 @@ Next, you need to configure the routes for your services. You can do this by cre
 }
 ```
 
-Finally, you need to configure the API Gateway to use the `ocelot.json` file as the configuration source. You can do this by adding the following code to the `Configure` method in the `Program.cs` file:
+Finally, you need to configure the API Gateway to use the `ocelot.json` file as the configuration source. You can do this by adding the following code in the `Program.cs` file:
 
 ```csharp
 app.UseOcelot().Wait();
