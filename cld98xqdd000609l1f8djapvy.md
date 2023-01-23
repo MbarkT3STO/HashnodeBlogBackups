@@ -90,3 +90,5 @@ Once you have defined your projects in the `launch.json` file, you can use the c
 In the example above, we have created a compound called "Run All" and included all three projects in the `configurations` property.
 
 To run all of the projects, you can simply select the "Run All" compound from the debug drop-down menu in VS Code. This will start all of the projects at once, and you can easily switch between them as needed.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1674505155027/5377337f-e383-44a9-af56-25b953be82fa.png align="center")
