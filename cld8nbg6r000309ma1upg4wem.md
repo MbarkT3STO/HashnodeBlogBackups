@@ -173,7 +173,7 @@ In the context of an API Gateway and microservices architecture, "downstream" an
 
 In summary, downstream is the service that handles the request, and upstream is the service that sends the request. The API Gateway is the service that sits in the middle and routes the requests to the appropriate downstream service. These names are not fixed, you can use the name that you prefer, but it's important to understand the concept and the direction of the communication.
 
-## Re-explanation of ocelot.json
+## Re-explanation of `ocelot.json`
 
 The `ocelot.json` file is a configuration file that helps the API Gateway (Ocelot) to understand where to route a specific request. It contains a list of routing rules that the API Gateway uses to direct the requests to the correct service.
 
