@@ -36,7 +36,7 @@ Once you have the prerequisites in place, you can proceed with the installation 
 
 Once RabbitMQ is installed, you need to configure it to run on your system. Follow these steps to configure RabbitMQ:
 
-1. Open the Command Prompt as an administrator and navigate to the RabbitMQ installation directory.
+1. Open the Command Prompt as an administrator and navigate to the RabbitMQ installation directory (*example*: `C:\Program Files\RabbitMQ Server\rabbitmq_server-3.11.7\sbin`).
     
 2. Type the command `rabbitmq-service.bat install` and press Enter to install the RabbitMQ service.
     
@@ -47,7 +47,7 @@ Once RabbitMQ is installed, you need to configure it to run on your system. Foll
 5. Open a web browser and navigate to [`http://localhost:15672/`](http://localhost:15672/) to access the management console.
     
 
-## How to log in ?
+## How to log in?
 
 Once you have set up RabbitMQ on your Windows system and enabled the management plugin, you can log in to the management console to monitor and manage your RabbitMQ server. Here's how to log in:
 
@@ -83,5 +83,5 @@ Once you have set up RabbitMQ on your Windows system and enabled the management 
         
     7. Log out of the management console and log back in using the new password.
         
-    
-    Note: It's important to change the default login credentials for security reasons. Also, it's recommended to use HTTPS protocol instead of HTTP to access the management console.
+
+**Note:** It's important to change the default login credentials for security reasons. Also, it's recommended to use HTTPS protocol instead of HTTP to access the management console.
