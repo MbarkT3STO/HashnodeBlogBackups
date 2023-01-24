@@ -85,3 +85,19 @@ Once you have set up RabbitMQ on your Windows system and enabled the management 
         
 
 **Note:** It's important to change the default login credentials for security reasons. Also, it's recommended to use HTTPS protocol instead of HTTP to access the management console.
+
+## Starting and Stopping RabbitMQ
+
+To start RabbitMQ using the Command Prompt (CMD), open CMD and run the following command:
+
+```http
+net start RabbitMQ
+```
+
+To stop RabbitMQ using the Command Prompt (CMD), open CMD and run the following command:
+
+```http
+net stop RabbitMQ
+```
+
+Note that these commands require that RabbitMQ is installed and configured as a Windows service. If you are running RabbitMQ on a different operating system or installed it in a different way, the commands may be different.
