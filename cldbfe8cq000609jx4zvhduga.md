@@ -123,7 +123,7 @@ The `SendMessage` action uses the `IBus` interface to send the message to a spec
 
 This code allows to send messages to a specific endpoint and queue, the endpoint URL and queue name are hardcoded in the application.
 
-**Or if you used the second registration :**
+**Or :**
 
 ```csharp
 [ApiController]
