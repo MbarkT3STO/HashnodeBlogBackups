@@ -155,8 +155,6 @@ The `IBus` instance is no longer required and the code for getting a send endpoi
 
 The `IPublishEndpoint` is a subset of `IBus` and it only allows message to be published but not received.
 
-It's also worth noting that this code assumes that the bus and the endpoint is already configured and started.
-
 ### Avoid Hard Coding The EndPoint
 
 hardcoding the endpoint URL and queue name in the application is not a good practice, as it can make it difficult to change the destination endpoint or queue without modifying the code.
