@@ -51,6 +51,14 @@ The [`config.Host`](http://config.Host)`("rabbitmq://`[`localhost`](http://local
 
 This configuration allows the application to use MassTransit to send and receive messages using RabbitMQ as a message broker. The bus is configured to use RabbitMQ and the username and password are provided, allowing it to connect to the RabbitMQ server.
 
+**Or:**
+
+```csharp
+services.AddMassTransit(x => x.UsingRabbitMq());
+```
+
+This code is a simplified configuration of MassTransit to use RabbitMQ as the message transport.
+
 You can also create a separate class to configure MassTransit, and call this class in Startup.cs, it's up to your preference.
 
 ### Create a Message/Data Class
@@ -97,29 +105,6 @@ public class MyController : ControllerBase
     public async Task<IActionResult> SendMessage(string text)
     {
         var message = new MyMessage { Text = text };
-        await _bus.Publish(message);
-        return Ok();
-    }
-}
-```
-
-**Or :**
-
-```csharp
-[ApiController]
-[Route("[controller]")]
-public class MyController : ControllerBase
-{
-    private readonly IBus _bus;
-    public MyController(IBus bus)
-    {
-        _bus = bus;
-    }
-
-    [HttpPost]
-    public async Task<IActionResult> SendMessage(string text)
-    {
-        var message = new MyMessage { Text = text };
 
         var queueToPublishTo = new Uri("rabbitmq://localhost/Queue1");
         var endPoint = await _bus.GetSendEndpoint(queueToPublishTo);
@@ -137,6 +122,40 @@ The `MyController` class has a constructor that takes an `IBus` instance as a pa
 The `SendMessage` action uses the `IBus` interface to send the message to a specific endpoint. The `var queueToPublishTo = new Uri("rabbitmq://`[`localhost/Queue1`](http://localhost/Queue1)`")` line is used to specify the endpoint URL and the queue name. Then, it uses `_bus.GetSendEndpoint(queueToPublishTo)` to get the endpoint object and then sends the message using `await endPoint.Send(message)`.
 
 This code allows to send messages to a specific endpoint and queue, the endpoint URL and queue name are hardcoded in the application.
+
+**Or if you used the second registration :**
+
+```csharp
+[ApiController]
+[Route("[controller]")]
+public class MyController : ControllerBase
+{
+    private readonly IPublishEndpoint _publishEndpoint;
+
+    public MyController(IPublishEndpoint publishEndpoint)
+    {
+        _publishEndpoint = publishEndpoint;
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> SendMessage(string text)
+    {
+        var message = new MyMessage { Text = text };
+        await _publishEndpoint.Publish(message);
+        return Ok();
+    }
+}
+```
+
+**Explication:**
+
+In this example, the `IPublishEndpoint` is injected in the controller's constructor. The `IPublishEndpoint` is used to publish the message using the `Publish` method, passing in an instance of the message.
+
+The `IBus` instance is no longer required and the code for getting a send endpoint for a specific queue and sending the message is not required since `IPublishEndpoint` is used to only publish the message.
+
+The `IPublishEndpoint` is a subset of `IBus` and it only allows message to be published but not received.
+
+It's also worth noting that this code assumes that the bus and the endpoint is already configured and started.
 
 ### Avoid Hard Coding The EndPoint
 
@@ -254,6 +273,30 @@ The `ep.UseMessageRetry(r => r.Interval(2, 100))` is used to enable message retr
 The `ep.ConfigureConsumer<MyMessageConsumer>(provider);` is used to configure the consumer that will handle messages received by this endpoint. The `MyMessageConsumer` class is the same class that was added as a message handler earlier in the code.
 
 This configuration allows the application to receive messages from a queue named "Queue1" and process them using the `MyMessageConsumer` class. The bus is configured to use RabbitMQ and the username and password are provided, allowing it to connect to the RabbitMQ server. The endpoint is configured with a prefetch count of 16, message retries with an interval of 2 seconds and 100 maximum retries.
+
+**Or:**
+
+```csharp
+services.AddMassTransit(x =>
+{
+    x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg =>
+    {
+        cfg.ReceiveEndpoint("Queue1", ep => ep.Consumer<MyMessageConsumer>());
+    }));
+});
+```
+
+**Explication:**
+
+This code is configuring an instance of MassTransit's `IBus` to use RabbitMQ as the message transport and adding it to the service collection in [ASP.NET](http://ASP.NET) Core application.
+
+`services.AddMassTransit(x => { ... })` is a method call that adds MassTransit services to the [ASP.NET](http://ASP.NET) Core service collection. The method takes a single parameter which is a lambda that is used to configure MassTransit options.
+
+`x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg => { ... }))` is a method call that adds an instance of the `IBus` to the service collection. The method takes a single parameter, which is a lambda that creates an instance of the `IBus`. `Bus.Factory.CreateUsingRabbitMq(cfg => { ... })` is a factory method that creates an instance of the `IBus` and configures it to use RabbitMQ as the message transport.
+
+`cfg.ReceiveEndpoint("Queue1", ep => ep.Consumer<MyMessageConsumer>())` is a method call that creates a receive endpoint for the RabbitMQ queue named "Queue1". The receive endpoint is a way for the bus to receive messages from a queue. The second parameter is a lambda that configures the endpoint. `ep.Consumer<MyMessageConsumer>()` is a method call that adds a consumer to the receive endpoint. The consumer specified is an instance of the class `MyMessageConsumer` that is expected to handle the messages received on this endpoint.
+
+The consumer class `MyMessageConsumer` should be an implementation of `MassTransit.IConsumer<T>` where `T` is the message type that consumer is expected to handle *(it is our next step).*
 
 ### Create a Message Handler
 
