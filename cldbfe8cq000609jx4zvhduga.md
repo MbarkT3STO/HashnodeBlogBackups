@@ -2,6 +2,14 @@
 
 MassTransit is a powerful message-based communication library for building distributed applications using the .NET framework. It provides a simple and flexible way to send and receive messages between different parts of your application, or even between different applications. In this article, we will show you how to set up MassTransit in an [ASP.NET](http://ASP.NET) Core application and use it to send and receive messages using RabbitMQ as the message broker.
 
+## Before Setting up MassTransit
+
+It's important to note that to use MassTransit, it is required to install and set up RabbitMQ. RabbitMQ is a message broker that is used to store and forward messages in a MassTransit application. Without RabbitMQ, MassTransit will not be able to send or receive messages.
+
+We talked before about [How to Setting Up RabbitMQ on Windows?](https://mbarkt3sto.hashnode.dev/how-to-setting-up-rabbitmq-on-windows)
+
+Once you have RabbitMQ set up and running, you can proceed with setting up MassTransit in your [ASP.NET](http://ASP.NET) Core application.
+
 ## **Install MassTransit**
 
 To start using MassTransit in your [ASP.NET](http://ASP.NET) Core application, you first need to install the package using NuGet. Open the Package Manager Console in Visual Studio and run the following commands:
@@ -41,7 +49,7 @@ The line `x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(config => { ... }
 
 The [`config.Host`](http://config.Host)`("rabbitmq://`[`localhost`](http://localhost)`", h => { ... })` line is used to configure the host that the bus will connect to. The first parameter is the connection string and the second parameter is a callback that allows you to configure the host settings, in this case, the username and password. This line of code is specifying the host to be "rabbitmq://[localhost](http://localhost)" and the username and password to be "guest".
 
-This configuration allows the application to use MassTransit to send and receive messages using RabbitMQ as a message broker. The bus is configured to use RabbitMQ and the username and password are provided, allowing it to connect to the RabbitMQ server
+This configuration allows the application to use MassTransit to send and receive messages using RabbitMQ as a message broker. The bus is configured to use RabbitMQ and the username and password are provided, allowing it to connect to the RabbitMQ server.
 
 You can also create a separate class to configure MassTransit, and call this class in Startup.cs, it's up to your preference.
 
