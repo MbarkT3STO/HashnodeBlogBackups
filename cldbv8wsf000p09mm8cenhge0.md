@@ -1,5 +1,7 @@
 # What is a Distributed System?
 
+## Definition
+
 A distributed system is a collection of independently running computer systems that are connected through a network, with the goal of achieving a common goal or providing a common service. These systems work together as a single, unified system, even though they may be located in different physical locations and running on different hardware.
 
 ## **Examples of Distributed Systems**
