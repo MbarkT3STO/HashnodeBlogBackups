@@ -1,4 +1,4 @@
-# Setting up and Using MassTransit in ASP.Net Core
+# Setting up and Using MassTransit with RabbitMQ in ASP.Net Core
 
 MassTransit is a powerful message-based communication library for building distributed applications using the .NET framework. It provides a simple and flexible way to send and receive messages between different parts of your application, or even between different applications. In this article, we will show you how to set up MassTransit in an [ASP.NET](http://ASP.NET) Core application and use it to send and receive messages using RabbitMQ as the message broker.
 
