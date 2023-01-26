@@ -6,7 +6,7 @@ One of the features of EF Core is the ability to enable lazy loading, which can 
 
 Lazy loading is a technique that defers the loading of related data until it is actually needed. For example, when loading an entity from the database, lazy loading allows you to only load the properties that you need, rather than loading all of the properties of the entity and its related entities. This can improve the performance of your application by reducing the amount of data that needs to be loaded from the database.
 
-## **How to Enable Lazy Loading in EF Core**
+## **How to Enable Lazy Loading in EF Core?**
 
 To enable lazy loading in EF Core, you will need to configure your context to use lazy loading. This can be done by setting the `UseLazyLoadingProxies` property to `true` on your `DbContext` options.
 
