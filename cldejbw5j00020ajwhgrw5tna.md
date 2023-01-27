@@ -121,3 +121,11 @@ public async Task<IActionResult> Stop()
 ```
 
 Also, it's important to understand that starting and stopping the service manually would not change the lifetime of the service, it will only invoke the StartAsync and StopAsync methods and whatever logic you have written inside those methods will be executed.
+
+## Should IHostedService be IDisposable?
+
+As for whether it should implement IDisposable, it depends on whether the IHostedService needs to release any resources when it is no longer needed.
+
+If the IHostedService is using any resources that need to be cleaned up when the service is no longer needed, then it should implement IDisposable, and dispose of those resources in the Dispose() method.
+
+However, if the IHostedService does not use any resources that need to be cleaned up, there is no need to implement IDisposable.
