@@ -66,8 +66,12 @@ Once you have created and configured your Hosted Service, it will automatically 
 First, we need to change the registration method and it would be as follow:
 
 ```csharp
-builder.Services.AddSingleton<TimedHostedService>();
-builder.Services.AddHostedService(s => s.GetRequiredService<TimedHostedService>());
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddSingleton<TimedHostedService>();
+    services.AddHostedService(s => s.GetRequiredService<TimedHostedService>());
+    //...
+}
 ```
 
 Once you have registered your `TimedHostedService` in the `ConfigureServices` method of your `Startup` or `program` class, you can inject it into a controller using dependency injection.
