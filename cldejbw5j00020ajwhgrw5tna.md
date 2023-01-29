@@ -33,12 +33,12 @@ public class TimedHostedService : IHostedService
 
     private void DoWork(object state)
     {
-        _logger.LogInformation("Timed Hosted Service is working.");
+        _logger.LogInformation("Timed Hosted Service is working...");
     }
 
     public Task StopAsync(CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Timed Hosted Service is stopping.");
+        _logger.LogInformation("Timed Hosted Service is stopping...");
 
         _timer?.Change(Timeout.Infinite, 0);
 
