@@ -2,6 +2,25 @@
 
 Polly is a .NET library that makes it easier to implement the retry and circuit breaker patterns in C# applications. These patterns help to provide resilience and stability to applications by handling failures and preventing further failures from cascading and taking down the entire system.
 
+## **Installing Polly**
+
+Polly is available as a NuGet package, which makes it easy to add to your project. You can install it using the following steps:
+
+1. Open the NuGet Package Manager Console in Visual Studio.
+    
+2. Run the following command: `Install-Package Polly`
+    
+3. Wait for the package to install.
+    
+
+After the installation is complete, you can start using Polly in your code by including the `Polly` namespace.
+
+```csharp
+using Polly;
+```
+
+That's it! You're now ready to start using the retry and circuit breaker patterns in your C# application using Polly.
+
 ## **Retry Pattern**
 
 The retry pattern involves automatically retrying a failed operation a specified number of times before giving up. This can be useful in situations where the failure is temporary, such as when a service is temporarily unavailable or when there is a network issue.
