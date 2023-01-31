@@ -168,7 +168,7 @@ Note that the `Vehicle` abstract class can also implement the `ITransportable` i
 
 ### **Interfaces**
 
-* ### Use an interface when you want to define a contract that multiple classes can implement.
+* Use an interface when you want to define a contract that multiple classes can implement.
     
 * Use an interface when you want to define a contract for a class that doesn't have any implementation.
     
