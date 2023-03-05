@@ -84,7 +84,7 @@ public class Customer_Manager
 
 ## **Kebab Case**
 
-Kebab case is a casing method where each word is separated by a hyphen. For example, `customer-name` is an example of a variable in kebab case. **<mark>This casing method is not commonly used in C#</mark>**, but is more common in other programming languages.
+Kebab case is a casing method where each word is separated by a hyphen. For example, `customer-name` is an example of a variable in kebab case. **<mark>This casing method is not commonly used/supported in C#</mark>**, but is more common in other programming languages.
 
 When to use Kebab case:
 
