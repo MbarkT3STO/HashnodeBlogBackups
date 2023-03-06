@@ -1,8 +1,8 @@
 ---
-title: "Casing Methods in C#: A Guide to When to Use Each One"
+title: "C# - Casing Methods"
 datePublished: Sun Mar 05 2023 15:45:16 GMT+0000 (Coordinated Universal Time)
 cuid: clevkefx200080ajzfytre9v2
-slug: casing-methods-in-c-a-guide-to-when-to-use-each-one
+slug: c-casing-methods
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1678030949967/193a8e8d-8e1d-4310-9cd9-43d50fb64444.webp
 tags: csharp, programming-blogs, net, clean-code
 
