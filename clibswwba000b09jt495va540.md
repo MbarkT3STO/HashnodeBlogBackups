@@ -134,6 +134,83 @@ public class NotificationService
 
 In this example, the `Customer` class doesn't directly invoke the `Send` method of the `NotificationService`. Instead, it delegates this responsibility to the `NotificationManager` class, which encapsulates the interaction with the `NotificationService`. This way, the `Customer` class only needs to know about its immediate friend, the `NotificationManager`, adhering to the Law of Demeter.
 
+### **Example 3: Avoiding cascading method calls**
+
+Consider a scenario where you have a `Car` class that has a `Driver` property, and the `Driver` class has a `License` property. Instead of directly accessing the `License` property of the `Driver` class, you can implement a method in the `Car` class to retrieve the license indirectly.
+
+```csharp
+public class Car
+{
+    private Driver driver;
+
+    public Car(Driver driver)
+    {
+        this.driver = driver;
+    }
+
+    public string GetDriverLicenseNumber()
+    {
+        return driver.GetLicense().GetLicenseNumber();
+    }
+}
+
+public class Driver
+{
+    private License license;
+
+    public Driver(License license)
+    {
+        this.license = license;
+    }
+
+    public License GetLicense()
+    {
+        return license;
+    }
+}
+
+public class License
+{
+    private string licenseNumber;
+
+    public License(string licenseNumber)
+    {
+        this.licenseNumber = licenseNumber;
+    }
+
+    public string GetLicenseNumber()
+    {
+        return licenseNumber;
+    }
+}
+```
+
+In this example, the `Car` class uses the `GetDriverLicenseNumber` method to indirectly retrieve the license number instead of accessing the `License` property directly. This way, the `Car` class does not need to have knowledge about the internal structure of the `Driver` and `License` classes, adhering to the Law of Demeter.
+
+### **Example 4: Limiting method parameters**
+
+Another way to apply the Law of Demeter is by limiting the number of parameters passed to a method. Consider a scenario where you have a `ReportGenerator` class that needs information from multiple objects to generate a report. Instead of passing each object as a separate parameter, you can encapsulate the required information into a single object and pass that to the `ReportGenerator`.
+
+```csharp
+public class ReportGenerator
+{
+    public void GenerateReport(ReportData reportData)
+    {
+        // Generate the report using the data from reportData object
+    }
+}
+
+public class ReportData
+{
+    public Customer Customer { get; set; }
+    public Order Order { get; set; }
+    public Product Product { get; set; }
+    // Other required data properties
+}
+```
+
+In this example, the `GenerateReport` method of the `ReportGenerator` class receives a single parameter `reportData`, which contains all the necessary information for generating the report. By encapsulating the required data into a single object, we avoid passing multiple individual objects to the method, adhering to the Law of Demeter.
+
 ## **Potential Challenges and Considerations**
 
 While following the Law of Demeter can bring several benefits to your codebase, there are a few challenges and considerations to keep in mind:
