@@ -104,8 +104,7 @@ int itemCount = 10;
 
 In the example above, `itemCount` uses domain-specific terminology and is more meaningful to developers working in that domain.
 
-### **  
-5\. Be explicit with variable and function names**
+### **5\. Be explicit with variable and function names**
 
 It's crucial to be explicit when naming variables and functions. Avoid using vague or generic names that can lead to confusion or ambiguity. Instead, strive for names that accurately convey the purpose or behavior of the element.
 
