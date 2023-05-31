@@ -1,5 +1,5 @@
 ---
-title: "Clean Code: Use meaningful names"
+title: "Clean Code: Use Meaningful Names"
 datePublished: Wed May 31 2023 15:10:02 GMT+0000 (Coordinated Universal Time)
 cuid: clibug8p9000b09ml9nxjhwax
 slug: clean-code-use-meaningful-names
