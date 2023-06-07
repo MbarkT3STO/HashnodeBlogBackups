@@ -31,3 +31,7 @@ An API Gateway can enforce security measures such as authentication, authorizati
 ### **4\. Protocol Translation and Versioning**
 
 An API Gateway can handle protocol translation between clients and microservices. It can accept requests in one protocol (e.g., HTTP) and translate them to another protocol (e.g., gRPC) that the microservices understand. Additionally, an API Gateway can manage versioning of APIs, allowing clients to access different versions of the same microservice without breaking compatibility.
+
+## Suggestion
+
+As a suggestion don't forget to take a look at my old topic about [Building Microservices Architecture with ASP.Net Core](https://mbarkt3sto.hashnode.dev/building-microservices-architecture-with-aspnet-core) to get understand the full image
