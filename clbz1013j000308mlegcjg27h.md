@@ -1,4 +1,13 @@
-# The most common SQL commands that everyone should know
+---
+title: "The most common SQL commands that everyone should know"
+datePublished: Thu Dec 22 2022 11:54:08 GMT+0000 (Coordinated Universal Time)
+cuid: clbz1013j000308mlegcjg27h
+slug: the-most-common-sql-commands-that-everyone-should-know
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1686214962034/87e26454-0152-4537-bca1-f269269d2191.jpeg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1671710021109/fpjK7kC4J.jpg
+tags: sql
+
+---
 
 ## **Introduction**
 
