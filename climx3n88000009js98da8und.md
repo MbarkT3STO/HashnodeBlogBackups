@@ -3,7 +3,7 @@ title: "SQL: Constraints"
 datePublished: Thu Jun 08 2023 09:09:41 GMT+0000 (Coordinated Universal Time)
 cuid: climx3n88000009js98da8und
 slug: sql-constraints
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1686215040305/3ec6c605-3ca2-4cc7-b688-f4018910b300.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1686933948476/972e58fa-dfcf-4fca-ac3c-932236861f3a.jpeg
 tags: sql-server, databases, sql
 
 ---
