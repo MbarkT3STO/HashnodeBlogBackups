@@ -1,8 +1,8 @@
 ---
-title: "C#: The Priority Queue Pattern"
+title: "The Priority Queue Pattern"
 datePublished: Fri Jun 16 2023 16:43:40 GMT+0000 (Coordinated Universal Time)
 cuid: cliysua4j000q09mp0h4j8187
-slug: c-the-priority-queue-pattern
+slug: the-priority-queue-pattern
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1686932835700/94adada8-3f8f-40d1-b25b-f230e6dec0d1.png
 tags: design-patterns, csharp, net
 
