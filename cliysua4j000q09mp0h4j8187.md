@@ -21,6 +21,7 @@ using System.Collections.Generic;
 public class PriorityQueue<T>
 {
     private SortedList<int, Queue<T>> queue;
+	public int Count => _queue.Count;
 
     public PriorityQueue()
     {
@@ -87,57 +88,7 @@ In this example, we enqueue three tasks with different priorities into the prior
 
 In addition to managing items based on their priorities, the priority queue pattern is also commonly used in task scheduling scenarios. By assigning priorities to tasks, you can ensure that higher-priority tasks are executed before lower-priority ones. Let's expand our previous `PriorityQueue` implementation to include task scheduling capabilities.
 
-### **Enhancing the** `PriorityQueue` Class
-
-To enable task scheduling, we can modify our existing `PriorityQueue` class to work with a `Task` class that represents individual tasks. Each `Task` object will have a priority and an associated action to be executed when the task is dequeued. Here's an updated version of the `PriorityQueue` class:
-
-```csharp
-using System;
-using System.Collections.Generic;
-
-public class PriorityQueue<T>
-{
-    private SortedList<int, Queue<T>> queue;
-
-    public PriorityQueue()
-    {
-        queue = new SortedList<int, Queue<T>>();
-    }
-
-    public void Enqueue(T item, int priority)
-    {
-        if (!queue.ContainsKey(priority))
-        {
-            queue.Add(priority, new Queue<T>());
-        }
-
-        queue[priority].Enqueue(item);
-    }
-
-    public T Dequeue()
-    {
-        if (queue.Count == 0)
-        {
-            throw new InvalidOperationException("Priority queue is empty.");
-        }
-
-        var highestPriority = queue.Keys[0];
-        var highestPriorityQueue = queue[highestPriority];
-        var item = highestPriorityQueue.Dequeue();
-
-        if (highestPriorityQueue.Count == 0)
-        {
-            queue.RemoveAt(0);
-        }
-
-        return item;
-    }
-}
-```
-
-### **Using Task Scheduling**
-
-Now, let's see an example of how to use the enhanced `PriorityQueue` class for task scheduling:
+Now, let's see an example of how to use the `PriorityQueue` class for task scheduling:
 
 ```csharp
 using System;
