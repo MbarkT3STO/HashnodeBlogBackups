@@ -1,8 +1,8 @@
 ---
-title: "DDD: Domain Entities in C#"
+title: "DDD: Domain Entities"
 datePublished: Sun Jul 09 2023 18:52:17 GMT+0000 (Coordinated Universal Time)
 cuid: cljvskahm000309mk80hnd0gs
-slug: ddd-domain-entities-in-c
+slug: ddd-domain-entities
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1688928060087/41a5437f-e1c9-4ecf-8a03-14ae08f02ced.png
 tags: csharp, software-architecture, net, ddd, domain-driven-design
 
