@@ -23,7 +23,7 @@ A Domain Entity, in its simplest form, is a class that represents a concept with
 * **Behavior**: Domain Entities encapsulate the behavior or operations that can be performed on them. These operations often involve manipulating the entity's state or interacting with other entities within the domain.
     
 
-## Implementing a Domain Entity in C#
+## Implementing a Domain Entity
 
 Let's take a concrete example of a `Customer` entity in a hypothetical e-commerce domain. The `Customer` entity may have properties such as `Id`, `Name`, `Email`, and `Address`. Additionally, it may have behaviors like updating the address or placing an order.
 
