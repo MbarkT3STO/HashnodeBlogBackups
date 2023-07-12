@@ -1,5 +1,5 @@
 ---
-title: "MongoDB: How to Install Mongo Shell"
+title: "MongoDB: How to Install Mongo Shell?"
 datePublished: Wed Jul 12 2023 12:03:55 GMT+0000 (Coordinated Universal Time)
 cuid: cljzoaoij000009ladvew08v7
 slug: mongodb-how-to-install-mongo-shell
