@@ -1,8 +1,8 @@
 ---
-title: "MongoDB: Find Documents from a Collection"
+title: "MongoDB: Find Documents"
 datePublished: Wed Jul 12 2023 15:12:15 GMT+0000 (Coordinated Universal Time)
 cuid: cljzv0vc2000009la5vmxbir0
-slug: mongodb-find-documents-from-a-collection
+slug: mongodb-find-documents
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1689174227804/b9256d2b-324a-46d8-93df-78d32d9f8cdf.webp
 tags: nosql, mongodb, databases
 
