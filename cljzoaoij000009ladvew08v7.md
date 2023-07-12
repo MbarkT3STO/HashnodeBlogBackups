@@ -8,7 +8,7 @@ tags: nosql, mongodb, databases
 
 ---
 
-MongoDB is a popular open-source NoSQL database that offers high performance, scalability, and flexibility for building modern applications. To interact with MongoDB and perform administrative tasks, developers often use the MongoDB Shell, a powerful command-line tool. In this blog post, we will guide you through the process of installing the MongoDB Shell on Windows, step by step.
+To interact with MongoDB and perform administrative tasks, developers often use the MongoDB Shell, a powerful command-line tool. In this blog post, we will guide you through the process of installing the MongoDB Shell on Windows, step by step.
 
 ## **Prerequisites**
 
