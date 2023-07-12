@@ -3,7 +3,7 @@ title: "MongoDB: Essential Shell Commands"
 datePublished: Wed Jul 12 2023 14:39:02 GMT+0000 (Coordinated Universal Time)
 cuid: cljztu5bp000209jk18i8gsks
 slug: mongodb-essential-shell-commands
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1689172148172/02cc5a47-1963-475a-9c9b-c49932da0e1e.webp
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1689172814350/4a599635-4166-4957-a2d7-61ba833f2e50.webp
 tags: nosql, mongodb, databases
 
 ---
