@@ -1,8 +1,8 @@
 ---
-title: "MongoDB: Shell"
+title: "MongoDB: How to Install Mongo Shell"
 datePublished: Wed Jul 12 2023 12:03:55 GMT+0000 (Coordinated Universal Time)
 cuid: cljzoaoij000009ladvew08v7
-slug: mongodb-shell
+slug: mongodb-how-to-install-mongo-shell
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1689162453415/7fc19363-c119-4344-839d-6bcffb0d7bde.webp
 tags: nosql, mongodb, databases
 
