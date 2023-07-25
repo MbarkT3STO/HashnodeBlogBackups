@@ -1,8 +1,8 @@
 ---
-title: "Updating Data in a PostgreSQL Table"
+title: "PostgreSQL: Updating Data in a Table"
 datePublished: Tue Jul 25 2023 19:50:18 GMT+0000 (Coordinated Universal Time)
 cuid: clkipoiug000h08lb2ciyf9bw
-slug: updating-data-in-a-postgresql-table
+slug: postgresql-updating-data-in-a-table
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1690314525710/e779f9ac-e8c5-4215-bf6c-ec0e8fd7998f.png
 tags: postgresql, sql
 
