@@ -23,7 +23,7 @@ The benefits of using computed columns include:
 3. **Simplified queries:** By storing pre-calculated values, queries become more straightforward and readable.
     
 
-## Using `GENERATED ALWAYS` for Computed Columns
+## Using `GENERATED ALWAYS`
 
 PostgreSQL introduced the `GENERATED` clause in version 12, allowing users to define computed columns with the `ALWAYS` keyword. The `GENERATED ALWAYS` clause ensures that the computed column is always up-to-date and cannot be directly assigned a value during insertion or update. Instead, its value is determined solely by the specified expression.
 
