@@ -4,7 +4,7 @@ datePublished: Sun Jul 30 2023 17:23:43 GMT+0000 (Coordinated Universal Time)
 cuid: clkppn9xt000c09l89oyg8p7t
 slug: ef-core-and-postgresql-working-with-json-data
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1690737068011/be62fa00-cbfe-4650-8e25-9655b87c9d11.png
-tags: entity-framework, postgresql, net, efcore
+tags: entity-framework, postgresql, json, net, efcore
 
 ---
 
