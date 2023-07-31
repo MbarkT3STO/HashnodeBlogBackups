@@ -189,7 +189,7 @@ public class YourDbContext : DbContext
 
 By using `modelBuilder.HasCheckConstraint`, you can execute custom SQL commands for adding check constraints without affecting the property names.
 
-## Option 4: Using `HasCheckConstraint` with Quoted Property Name
+### Option 4: Using `HasCheckConstraint` with Quoted Property Name
 
 Another way to deal with camel case issues when adding check constraints in PostgreSQL using EF Core is to use the `HasCheckConstraint` method with the property name enclosed in double quotes (`""`). This will ensure that the exact property name is used, and no name conversion will take place.
 
