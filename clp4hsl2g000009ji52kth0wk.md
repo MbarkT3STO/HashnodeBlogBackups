@@ -1,8 +1,8 @@
 ---
-title: "The Result Pattern Design Pattern"
+title: "The Result Design Pattern"
 datePublished: Sat Nov 18 2023 20:19:16 GMT+0000 (Coordinated Universal Time)
 cuid: clp4hsl2g000009ji52kth0wk
-slug: the-result-pattern-design-pattern
+slug: the-result-design-pattern
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1700338125551/c4746b66-ed56-4030-9f6f-890a6b3a7c2d.webp
 tags: design-patterns, csharp, net
 
