@@ -10,7 +10,7 @@ tags: csharp, net, rabbitmq, aspnet-core, event-driven-architecture
 
 Ensuring message deduplication in a distributed system is crucial for maintaining data integrity and preventing unintended side effects. In this blog post, we'll explore how to implement a deduplication mechanism for RabbitMQ messages using C#, [ASP.NET](http://ASP.NET) Core, EF Core, MassTransit, and the custom `IDeduplicationService` interface.
 
-## **<mark>Warning:</mark>**
+## **<mark>Warning</mark>**
 
 In this article, I skipped many of the basic concepts, this article is talking about an advanced topic, so, you need to be familiar with: `RabbitMQ`, `MassTransit`, `Message Consumers`, `EF Core`, `Event-Driven Architecture`.
 
