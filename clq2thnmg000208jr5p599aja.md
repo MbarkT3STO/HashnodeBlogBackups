@@ -3,7 +3,7 @@ title: "Microservices Architecture: The Outbox Pattern"
 datePublished: Tue Dec 12 2023 20:50:51 GMT+0000 (Coordinated Universal Time)
 cuid: clq2thnmg000208jr5p599aja
 slug: microservices-architecture-the-outbox-pattern
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1702413603424/d169e1a3-a42f-4d93-b4af-9021f0068d8f.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1702416225627/63ca78b3-5341-40fc-9058-dfd30733cc68.jpeg
 tags: microservices, design-patterns, software-architecture, software-engineering, aspnet-core
 
 ---
