@@ -39,3 +39,18 @@ SSH is a cryptographic network protocol for secure remote login and command exec
 SMTP is a protocol used for sending email messages between servers. It enables the transfer of emails from the sender's mail server to the recipient's mail server. Port 25 is the default port for SMTP traffic.
 
 **Example:** When you send an email using your email client, such as Gmail or Outlook, the email is sent to your email provider's SMTP server on port 25, which then forwards it to the recipient's mail server for delivery.
+
+## **6\. DNS (Domain Name System) - Port 53**
+
+DNS is a hierarchical decentralized naming system for computers, services, or any resource connected to the internet or a private network. It translates human-readable domain names into IP addresses, allowing users to access websites and other online services using memorable names instead of numeric IP addresses. Port 53 is the default port for DNS traffic.
+
+**Example:** When you type a website's domain name into your browser, such as "[www.example.com](http://www.example.com/)", your computer queries a DNS server to resolve the domain name to its corresponding IP address. This process occurs over port 53, allowing your browser to establish a connection with the web server hosting the website.
+
+## **  
+7\. DHCP (Dynamic Host Configuration Protocol) - Port 67/68**
+
+DHCP is a network management protocol used to dynamically assign IP addresses and other network configuration parameters to devices on a network. It simplifies the process of configuring network settings by automatically assigning IP addresses to devices when they connect to the network. Port 67 is used for DHCP server communication, while port 68 is used for DHCP client communication.
+
+**Example:** When a device, such as a computer or smartphone, connects to a network, it sends a DHCP discover message to the network. A DHCP server receives this message and responds with a DHCP offer, which includes an available IP address and other network configuration parameters. The device then sends a DHCP request to accept the offered configuration, and the server acknowledges the request, completing the DHCP process.
+
+DHCP is commonly used in local area networks (LANs) and home networks to automate the process of assigning IP addresses to devices. It helps streamline network management tasks and ensures efficient use of available IP addresses.
