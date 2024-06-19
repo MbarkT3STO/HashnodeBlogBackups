@@ -46,8 +46,7 @@ DNS is a hierarchical decentralized naming system for computers, services, or an
 
 **Example:** When you type a website's domain name into your browser, such as "[www.example.com](http://www.example.com/)", your computer queries a DNS server to resolve the domain name to its corresponding IP address. This process occurs over port 53, allowing your browser to establish a connection with the web server hosting the website.
 
-## **  
-7\. DHCP (Dynamic Host Configuration Protocol) - Port 67/68**
+## 7\. DHCP (Dynamic Host Configuration Protocol) - Port 67/68
 
 DHCP is a network management protocol used to dynamically assign IP addresses and other network configuration parameters to devices on a network. It simplifies the process of configuring network settings by automatically assigning IP addresses to devices when they connect to the network. Port 67 is used for DHCP server communication, while port 68 is used for DHCP client communication.
 
