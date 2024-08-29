@@ -14,8 +14,6 @@ In this blog post, we’ll dive into what measures are, how to create them, and 
 
 Measures are dynamic calculations that adjust based on the context of your data. Unlike calculated columns, which perform row-by-row calculations and store the result in the data model, measures calculate results on the fly as you interact with your reports. This makes them incredibly flexible and powerful for data analysis.
 
----
-
 ## How to Create a Measure in Power BI
 
 Creating a measure in Power BI is straightforward. Follow these steps:
@@ -40,6 +38,8 @@ Creating a measure in Power BI is straightforward. Follow these steps:
     ```excel
     Total Sales = SUM(Orders[TotalAmount])
     ```
+    
+    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1724964225161/d6d07b7f-6b2a-4b13-a95e-de116aadde71.png align="center")
     
 4. **Name Your Measure**: The first part of the DAX expression before the equals sign (`=`) is the name of your measure. Make sure to choose a name that clearly describes what the measure calculates.
     
