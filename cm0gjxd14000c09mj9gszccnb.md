@@ -38,7 +38,7 @@ Let’s briefly review the dataset ([**Download it from here**)](https://y15w7-m
 * **Orders**: Captures order transactions including customer ID, product ID, quantity, unit price, and total amount.
     
 
-## How to Use the `CALCULATE` Function in Power BI
+## Examples
 
 ### Example 1: Calculate Total Sales for a Specific Country
 
