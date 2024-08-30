@@ -1,8 +1,8 @@
 ---
-title: "Power BI DAX: LOOKUPVALUE"
+title: "Power BI DAX: LOOKUPVALUE Function"
 datePublished: Fri Aug 30 2024 11:59:32 GMT+0000 (Coordinated Universal Time)
 cuid: cm0gnvjyl00000al52kiv7s10
-slug: power-bi-dax-lookupvalue
+slug: power-bi-dax-lookupvalue-function
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1725017203767/5bab4996-80c2-40f1-bf89-788bc99970ce.jpeg
 tags: data-science, data-analysis, business-intelligence, powerbi
 
