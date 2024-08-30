@@ -4,6 +4,7 @@ datePublished: Thu Aug 29 2024 20:39:24 GMT+0000 (Coordinated Universal Time)
 cuid: cm0fr092700040amhf1gaan1b
 slug: power-bi-measures
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1724963818244/8b21dc21-19ff-4367-9693-17f0416321bf.jpeg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1725037044586/087e4639-0ffa-4ad7-be13-cc72090e053e.jpeg
 tags: data-science, data-analysis, business-intelligence, powerbi
 
 ---
