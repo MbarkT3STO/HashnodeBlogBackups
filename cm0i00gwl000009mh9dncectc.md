@@ -46,7 +46,7 @@ Let’s briefly review the dataset ([**Download it from here)**](https://y15w7-m
 * **Orders**: Captures order transactions including customer ID, product ID, quantity, unit price, and total amount.
     
 
-### Where to Write the DAX Code and View the Results of the `SUMMARIZE` Function
+## Where to Write the DAX Code and View the Results of the `SUMMARIZE` Function
 
 To use the `SUMMARIZE` function in Power BI, you'll typically write your DAX code in one of the following locations:
 
