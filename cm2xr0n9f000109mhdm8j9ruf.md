@@ -137,6 +137,114 @@ app.listen(PORT, () => {
 });
 ```
 
+---
+
+In addition to access tokens, it is common to implement refresh tokens in your authentication strategy. Refresh tokens allow users to obtain new access tokens without having to log in again, enhancing the user experience while maintaining security.
+
+## Understanding Refresh Tokens
+
+* **Access Tokens**: Short-lived tokens used to access protected resources. They typically have a limited lifespan (e.g., 15 minutes to 1 hour).
+    
+* **Refresh Tokens**: Long-lived tokens used to obtain new access tokens. Refresh tokens are stored securely on the client and are used to request new access tokens when the original ones expire.
+    
+
+## Why Use Refresh Tokens?
+
+1. **Improved Security**: Access tokens can expire quickly, reducing the window of opportunity for misuse. If an access token is compromised, it will only be valid for a short time.
+    
+2. **Enhanced User Experience**: Users do not need to log in frequently, as refresh tokens can be used to obtain new access tokens automatically.
+    
+
+## Step 1: Update the User Model
+
+In our user model, we will modify it to include refresh tokens. For simplicity, we will keep the refresh token in memory.
+
+```typescript
+let users: User[] = [
+    { id: 1, username: 'user1', password: 'password1' },
+    { id: 2, username: 'user2', password: 'password2' },
+];
+
+interface UserWithToken extends User {
+    refreshToken?: string;
+}
+
+export const findUser = (username: string) => {
+    return users.find((user) => user.username === username);
+};
+```
+
+## Step 2: Generate Refresh Tokens
+
+Modify the login route to generate a refresh token along with the access token.
+
+```typescript
+app.post('/login', async (req: Request, res: Response) => {
+    const { username, password } = req.body;
+    const user: UserWithToken | undefined = findUser(username);
+
+    if (user && (await bcrypt.compare(password, user.password))) {
+        const accessToken = jwt.sign({ id: user.id, username: user.username }, process.env.JWT_SECRET || 'your-secret-key', { expiresIn: '15m' });
+        const refreshToken = jwt.sign({ id: user.id, username: user.username }, process.env.JWT_SECRET || 'your-secret-key', { expiresIn: '7d' });
+
+        // Store refresh token in user model
+        user.refreshToken = refreshToken;
+
+        res.json({ accessToken, refreshToken });
+    } else {
+        res.status(401).send('Invalid credentials');
+    }
+});
+```
+
+## Step 3: Create a Route to Refresh Tokens
+
+Add a route to handle the refresh token logic. This route will verify the refresh token and provide a new access token.
+
+```typescript
+app.post('/refresh', (req: Request, res: Response) => {
+    const { refreshToken } = req.body;
+
+    if (!refreshToken) {
+        return res.sendStatus(401); // Unauthorized
+    }
+
+    const user: UserWithToken | undefined = users.find((user) => user.refreshToken === refreshToken);
+    if (!user) {
+        return res.sendStatus(403); // Forbidden
+    }
+
+    jwt.verify(refreshToken, process.env.JWT_SECRET || 'your-secret-key', (err) => {
+        if (err) {
+            return res.sendStatus(403); // Forbidden
+        }
+
+        const newAccessToken = jwt.sign({ id: user.id, username: user.username }, process.env.JWT_SECRET || 'your-secret-key', { expiresIn: '15m' });
+        res.json({ accessToken: newAccessToken });
+    });
+});
+```
+
+## Step 4: Invalidate Refresh Tokens
+
+To enhance security, you may want to implement a mechanism to invalidate refresh tokens, such as logging out or rotating tokens after use. For simplicity, we will add a logout route.
+
+```typescript
+app.post('/logout', (req: Request, res: Response) => {
+    const { refreshToken } = req.body;
+
+    // Invalidate the refresh token
+    const user: UserWithToken | undefined = users.find((user) => user.refreshToken === refreshToken);
+    if (user) {
+        user.refreshToken = undefined; // Clear refresh token
+    }
+
+    res.sendStatus(204); // No Content
+});
+```
+
 ## Conclusion
 
-In this article, we implemented authentication and authorization in an Express.js application using JWT. We created a simple login route, protected routes with middleware, and handled token verification. This is a foundational aspect of building secure web applications.
+In this continuation of our article on authentication and authorization, we implemented refresh tokens to improve security and user experience. We covered how to generate refresh tokens upon login, how to refresh access tokens using the refresh token, and how to invalidate tokens upon logout.
+
+By implementing both access and refresh tokens, you create a robust authentication system that helps secure your Express.js applications.
