@@ -30,7 +30,7 @@ Express provides a simple way to serve static files using the built-in `express.
 Create a folder named `public` in your project directory, where all static files (CSS, JS, images) will be stored.
 
 ```plaintext
-plaintextCopy codeyour-project/
+your-project/
 │
 ├── public/
 │   ├── css/
