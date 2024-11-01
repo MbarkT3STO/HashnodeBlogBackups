@@ -1,8 +1,8 @@
 ---
-title: "Prisma ORM: Setting Up Prisma in an Express.js Project"
+title: "Prisma ORM: Setting Up with an Express.js Project and PostgreSQL"
 datePublished: Fri Nov 01 2024 16:44:20 GMT+0000 (Coordinated Universal Time)
 cuid: cm2yyshmc00000ak0188v8qob
-slug: prisma-orm-setting-up-prisma-in-an-expressjs-project
+slug: prisma-orm-setting-up-with-an-expressjs-project-and-postgresql
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1730439479551/8c1988d3-0996-42cf-84e0-a281d0965d1b.png
 tags: javascript, databases, prisma, prismaorm
 
