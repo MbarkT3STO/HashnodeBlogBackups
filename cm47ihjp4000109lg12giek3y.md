@@ -14,6 +14,8 @@ The **Waterfall** model and **Agile** are two distinct approaches to software de
 
 ## **What is the Waterfall Model?**
 
+![The Waterfall approach to project management with Vault ERP | Vault-ERP](https://blog.vault-erp.com/image.axd?picture=/Waterfall%20approach/Vault_WaterfallPM_Blog_900x600px_01.png align="left")
+
 The **Waterfall Model** is a traditional, linear approach to software development. It follows a structured, step-by-step process, where each phase must be completed before moving on to the next. Once a phase is completed, it’s difficult (or costly) to go back and make changes.
 
 ### **Phases in the Waterfall Model**
@@ -37,6 +39,8 @@ The Waterfall model works well for projects where requirements are clear and unl
 
 ## **What is Agile?**
 
+![The Agile Development Process for Mobile Apps | Krasamo](https://www.krasamo.com/wp-content/uploads/agile-01-scaled.jpeg align="left")
+
 Unlike Waterfall, **Agile** is an iterative and flexible approach to software development. Agile breaks projects down into smaller, manageable chunks called **sprints** or **iterations**. Each sprint delivers a working piece of software, and feedback is gathered from stakeholders, which influences the next iteration.
 
 In Agile:
@@ -51,6 +55,8 @@ In Agile:
 ---
 
 ## **Key Differences Between Agile and Waterfall**
+
+![](https://cdn-ddajl.nitrocdn.com/YpOEeljvfhJsSAxdAeAnNgjqyCFqMKvq/assets/images/optimized/rev-1be0f78/zaigoinfotech.b-cdn.net/wp-content/uploads/2024/04/agile-vs-waterfall-1-scaled.jpg align="center")
 
 ### **1\. Approach to Project Phases**
 
