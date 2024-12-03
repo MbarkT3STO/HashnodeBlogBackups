@@ -3,7 +3,7 @@ title: "Agile: Comparing with Traditional Waterfall Model"
 datePublished: Mon Dec 02 2024 20:57:34 GMT+0000 (Coordinated Universal Time)
 cuid: cm47ihjp4000109lg12giek3y
 slug: agile-comparing-with-traditional-waterfall-model
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1733173000425/c1417d19-6a74-4928-815c-7c8c178d67d7.webp
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1733204168732/8717e5b3-6c57-4cfb-8473-2b76fd3d5821.png
 tags: agile, scrum
 
 ---
