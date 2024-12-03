@@ -3,7 +3,7 @@ title: "Agile: Principles and Values"
 datePublished: Mon Dec 02 2024 20:55:30 GMT+0000 (Coordinated Universal Time)
 cuid: cm47ievuz000309js382v9gna
 slug: agile-principles-and-values
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1733172808781/41207f74-f382-471e-886f-a74ebf4315f2.webp
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1733204181391/48a0fe57-f106-47f0-aeed-0ce21e473fb4.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1733172920068/be51c35e-2f98-4b75-a365-cf7ba88f4796.webp
 tags: agile, scrum
 
