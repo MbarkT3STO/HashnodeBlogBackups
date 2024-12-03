@@ -3,7 +3,7 @@ title: "Agile Frameworks: An Overview (Scrum, Kanban, XP, etc.)"
 datePublished: Mon Dec 02 2024 21:19:41 GMT+0000 (Coordinated Universal Time)
 cuid: cm47j9zjb001209mnbpbvb3f0
 slug: agile-frameworks-an-overview-scrum-kanban-xp-etc
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1733173433033/057443ce-83e1-41d4-a777-84d29137414a.webp
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1733204091851/cb12b7d1-d000-414d-b466-46877f375d6d.png
 tags: agile, scrum
 
 ---
