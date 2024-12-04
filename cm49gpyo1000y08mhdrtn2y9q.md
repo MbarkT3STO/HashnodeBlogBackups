@@ -4,7 +4,7 @@ datePublished: Wed Dec 04 2024 05:43:40 GMT+0000 (Coordinated Universal Time)
 cuid: cm49gpyo1000y08mhdrtn2y9q
 slug: scrum-burndown-and-burnup-charts
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1733290437639/71f6d1eb-432b-4814-ba07-04f08972646d.png
-tags: agile, project-management
+tags: agile, project-management, scrum
 
 ---
 
