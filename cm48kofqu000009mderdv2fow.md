@@ -1,5 +1,5 @@
 ---
-title: "Agile: Scrum Artifacts"
+title: "Scrum: Scrum Artifacts"
 datePublished: Tue Dec 03 2024 14:46:41 GMT+0000 (Coordinated Universal Time)
 cuid: cm48kofqu000009mderdv2fow
 slug: agile-scrum-artifacts
