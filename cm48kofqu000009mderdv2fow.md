@@ -1,8 +1,8 @@
 ---
-title: "Scrum Artifacts: Product Backlog, Sprint Backlog, Increment"
+title: "Agile: Scrum Artifacts"
 datePublished: Tue Dec 03 2024 14:46:41 GMT+0000 (Coordinated Universal Time)
 cuid: cm48kofqu000009mderdv2fow
-slug: scrum-artifacts-product-backlog-sprint-backlog-increment
+slug: agile-scrum-artifacts
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1733236939458/c790bc85-26b1-40ae-870d-61d2cba165d3.avif
 tags: agile, project-management, scrum
 
