@@ -1,5 +1,5 @@
 ---
-title: "Agile Frameworks: An Overview (Scrum, Kanban, XP, etc.)"
+title: "Agile: Agile Frameworks"
 datePublished: Mon Dec 02 2024 21:19:41 GMT+0000 (Coordinated Universal Time)
 cuid: cm47j9zjb001209mnbpbvb3f0
 slug: agile-frameworks-an-overview-scrum-kanban-xp-etc
