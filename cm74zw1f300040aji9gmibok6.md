@@ -115,7 +115,7 @@ class CaesarCipher
 
 Now, let’s see the **Python implementation**:
 
-```python-repl
+```python
 def caesar_cipher(text, shift, mode='encrypt'):
     result = ""
     shift = shift if mode == 'encrypt' else -shift
