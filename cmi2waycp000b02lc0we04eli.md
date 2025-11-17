@@ -4,6 +4,7 @@ datePublished: Mon Nov 17 2025 08:41:23 GMT+0000 (Coordinated Universal Time)
 cuid: cmi2waycp000b02lc0we04eli
 slug: idempotency-in-software-engineering
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1763368825397/4be80016-1c2f-4bc1-9cf1-55b56b5d8718.jpeg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1763369941628/1a188d30-885c-487e-8f75-070b43bff4cc.jpeg
 tags: design-patterns, csharp, api, apis, typescript, software-engineering
 
 ---
